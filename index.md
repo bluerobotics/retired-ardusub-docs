@@ -3,7 +3,7 @@ layout: default
 title: "Home"
 ---
 
-#ArduSub
+# {{page.title}}
 
 **Firmware for Remote-Operated and Autonomous Capabilities in Underwater Vehicles**
 
