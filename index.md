@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Home"
+permalink: /
 ---
 
 # {{page.title}}
