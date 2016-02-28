@@ -51,31 +51,7 @@ We recommend using the most recent daily build of QGroundControl, which can be [
 
 During the early stage of ArduSub development (now), there are no compiled firmware files available and the firmware must be compiled directly. 
 
-Please refer to the ArduPilot documentation for basic instructions on building the code.
-
-- [Mac Instructions](http://dev.ardupilot.com/wiki/building-px4-with-make-on-mac/)
-- [Linux Instructions](http://dev.ardupilot.com/wiki/building-px4-for-linux-with-make/)
-- [Windows Instructions](http://dev.ardupilot.com/wiki/building-px4-with-make/)
-
-To compile the ArduSub branch, first `cd ArduSub` to enter the directory and then use a command with the following format:
-
-``` bash
-make [board type]-[frame type]-[upload (optional)]
-```
-
-For example,
-
-``` bash
-make px4-v2-vectored-upload
-```
-
-The available board types can be seen by entering `make` with no arguments. Below are the available frame types.
-
-| Frame          | Function                                                             |
-|---------------:|:-------------------------------------------------------------------- |
-| `bluerov`      | Compile for BlueROV thruster configuration                           |
-| `vectored`     | Compile for vectored w/ side-by-side vertical thruster configuration |
-| `vectored6DOF` | Compile for vectored w/ corner vertical thruster configuration       |
+Please see the [Developer section](/developers/) for instructions on how to do so.
 
 ## Connect QGC to Controller
 
