@@ -16,7 +16,7 @@ google_analytics_id: ''
 navigation: 1
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://ardusub.bluerobotics.com/'
+codeurl: 'https://ardusub.bluerobotics.com'
 
 # Default categories (in order) to appear in the navigation
 page-order: [
@@ -27,7 +27,7 @@ page-order: [
 
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: '/ardusub-docs'
+baseurl: '/'
 
 # Dates are not included in permalinks
 permalink: none
