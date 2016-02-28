@@ -2,9 +2,20 @@
 layout: default
 title: "Introducing ArduSub"
 permalink: /introduction/
+category: intro
+order: 10
+nav:
+- Overview: overview
+- Key Features: key-features
+- What You'll Need: what-youll-need
+- Supported Frames: supported-frames
+- Controllers: controllers
+- Applications: applications
 ---
 
 # {{page.title}}
+
+{{page.category}}
 
 ArduSub is an advanced open-source ROV/AUV control system.
 
@@ -12,8 +23,10 @@ ArduSub is an advanced open-source ROV/AUV control system.
 
 ## Key Features
 
-## Getting Started
+## What You'll Need
 
-## The Development Team
+## Supported Frames
 
-## Learn More about ArduSub
+## Controllers
+
+## Applications

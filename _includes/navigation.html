@@ -1,16 +1,39 @@
 <ul class="nav nav-list">
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
-    {% for section in site.sections %}
-        {% assign attr = section[0] %}
-        {% assign label = section[1] %}
+    <li class=nav-header style="text-transform:none;font-size:1.5em;">ArduSub</li>
 
-        {% for page in site.categories[attr] %}
-            {% if forloop.first %}
-                <li class=nav-header>{{ label }}</li>
+    <li><a href="{{ site.baseurl }}/">Home</a></li>
+</ul>
+<ul class="nav nav-list">
+    {% for permalink in site.page-order %}
+        {% for page in site.pages %}
+            {% if permalink[0] == page.permalink %}
+                <li class="nav-header" data-order="{{ page.order }}">{{ page.title }}</li>
+                {% for section in page.nav %}
+                    {% for heading in section %}
+                        <li><a href="{{ site.baseurl }}{{ page.url }}#{{ heading[1] }}">{{ heading[0] }}</a></li>
+                    {% endfor %}
+                {% endfor %}
             {% endif %}
-            <li data-order="{{ page.order }}"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
     {% endfor %}
 <!-- List additional links. It is recommended to add a divider
     e.g. <li class=divider></li> first to break up the content. -->
 </ul>
+
+<ul class="nav nav-list">
+    <li class="divider"></li>
+
+    <li class=nav-header>Visit the Code</li>
+
+    <li><iframe src="https://ghbtns.com/github-btn.html?user=bluerobotics&repo=ardusub&type=star&count=true&v=2" frameborder="0" scrolling="0" width="80px" height="30px"></iframe></li>
+
+    <li><iframe src="https://ghbtns.com/github-btn.html?user=bluerobotics&repo=ardusub&type=fork&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="30px"></iframe></li>
+
+    <li><img src="https://travis-ci.org/bluerobotics/ardusub.svg?branch=master" /></li>
+
+    <li class="divider"></li>
+
+    <li class=nav-header>Sponsored by</li>
+</ul>
+
+<a href="http://bluerobotics.com"><img src="{{ site.baseurl }}/images/br-logo-small.png" /></a>

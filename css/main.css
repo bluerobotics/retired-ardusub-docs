@@ -18,10 +18,10 @@ code {
     color: inherit;
 }
 
-h1 {font-size:1.5em;}
-h2 {font-size:1.4em;}
-h3 {font-size:1.3em;}
-h4 {font-size:1.2em;}
+h1 {font-size:1.9em;}
+h2 {font-size:1.7em;}
+h3 {font-size:1.5em;}
+h4 {font-size:1.3em;}
 h5 {font-size:1.1em;}
 
 #header {
@@ -38,6 +38,8 @@ h5 {font-size:1.1em;}
     font-size: 0.85em;
     color: #999;
     text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
 }
 
 #content > .page-header:first-child {
@@ -50,7 +52,7 @@ h5 {font-size:1.1em;}
 
 
 #navigation {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 #navigation li a {
@@ -61,6 +63,7 @@ h5 {font-size:1.1em;}
 #navigation .nav-header {
     padding-left: 0;
     padding-right: 0;
+    font-size: 1.0em;
 }
 
 body.rtl {

@@ -2,6 +2,15 @@
 layout: default
 title: "Initial Setup"
 permalink: /initial-setup/
+category: setup
+order: 20
+nav:
+- Wiring and Connections: wiring-and-connections
+- Install QGroundControl: install-qgroundcontrol
+- Loading Firmware: loading-firmware
+- Connect QGC to Controller: connect-qgc-to-controller
+- Calibration: calibration
+- Configuring Parameters: configuring-hardware
 ---
 
 # {{page.title}}
@@ -14,3 +23,15 @@ For more information on each of these tasks see the topics below:
 - [Assembly](#)
 - [Loading Firmware](/loading-firmware/)
 - [Configuring Hardware](configuring-hardware)
+
+## Wiring and Connections
+
+## Install QGroundControl
+
+## Loading Firmware
+
+## Connect QGC to Controller
+
+## Calibration
+
+## Configuring Parameters

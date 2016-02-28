@@ -4,7 +4,7 @@ title: "Home"
 permalink: /
 ---
 
-# {{page.title}}
+# {{ page.title }}
 
 **Firmware for Remote-Operated and Autonomous Capabilities in Underwater Vehicles**
 
@@ -15,7 +15,7 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 ## System Components
 
 - A PixHawk or other DroneCode-compatible autopilot loaded with the latest version of the [ArduSub firmware](#).
-- [QGroundControl software] for setup, configuration, and operation of the vehicle.
+- [QGroundControl software](#) for setup, configuration, and operation of the vehicle.
 - A [suitable ROV or AUV](http://bluerobotics.com) for use with the software
 - Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators
 
@@ -26,6 +26,8 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 - *ArduSub* currently supports two frame configurations:
 	- **Vectored Frame** giving excellent smooth control and stability 
 	- **BlueROV 6DOF Frame** for maneuvering in unique 6 degree-of-freedom control
+- In the future, other frame types will be supported, such as:
+	- **3 and 4 thrusters** arranged with two thrusters for forward/turn and one or two for vertical
 
 ### AUVs
 

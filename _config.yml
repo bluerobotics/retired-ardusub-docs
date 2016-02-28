@@ -2,6 +2,7 @@
 title: 'ArduSub'
 subtitle: 'Open-Source ROV/AUV Firmware'
 
+
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
 
@@ -18,12 +19,10 @@ navigation: 1
 codeurl: 'https://github.com/rjehangir/ardusub-docs/'
 
 # Default categories (in order) to appear in the navigation
-sections: [
-    ['doc', 'Documentation'],
-    ['tut', 'Tutorial'],
-    ['ref', 'Reference'],
-    ['dev', 'Developers'],
-    ['post', 'Posts']
+page-order: [
+    ['/introduction/'],
+    ['/initial-setup/'],
+    ['/first-dive/']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
