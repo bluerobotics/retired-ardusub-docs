@@ -7,6 +7,7 @@ nav:
 - Key Features: key-features
 - What You'll Need: what-youll-need
 - Supported Frames: supported-frames
+- Sensors and Actuators: sensors-and-actuators
 - Applications: applications
 ---
 
@@ -33,7 +34,14 @@ ArduSub is on the cutting edge of marine robotics and intended for those people 
 
 ## What You'll Need
 
-There are numerous potential combinations of hardware and vehicles compatible with the ArduSub controller. 
+There are numerous potential combinations of hardware and vehicles compatible with the ArduSub controller. Here's a short summary list:
+
+- [Supported ROV](#supported-frames) with thrusters and speed controllers
+- Autopilot controller like the 3DR PixHawk
+- Tether for communication via serial or Ethernet
+- Laptop computer with QGroundControl installed
+- USB gamepad or joystick controller
+- Pressure sensor for depth measurement (optional)
 
 ### ROV
 
@@ -71,6 +79,17 @@ ArduSub includes a high-level motor library that can configure motors in any con
 - **BlueROV Configuration** with 6-DOF thruster positioning.
 - **Vectored ROV w/ Side-by-Side Vertical Thrusters**, a common thruster configuration among work-class and research-class ROVs.
 - **Vectored ROV w/ Corner Vertical Thrusters**, an 8-thruster configuration with 6-DOF control and heavy lifting capacity.
+
+## Sensors and Actuators
+
+In addition to the standard onboard sensors (IMU, compass), the ArduSub controller supports a number of external sensors including:
+
+- Pressure/depth sensors for measurement and auto depth-hold
+- GPS for position at the surface (does not work underwater)
+
+In the future the ArduSub controller will be able to interface with more sensors such as depth sounders, scanning sonars, temperature sensors, and conductivity sensors.
+
+The controller can command dimmable lights and can be configured to control standard servos as well for additional functionality.
 
 ## Applications
 

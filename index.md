@@ -31,7 +31,7 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 
 ### AUVs
 
-- *ArduSub* has not yet been tested with any AUVs but they will be added in the future
+- *ArduSub* has not yet been tested with any AUVs but support will be added in the future
 
 ## More Info
 
