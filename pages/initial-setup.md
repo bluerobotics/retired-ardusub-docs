@@ -30,6 +30,8 @@ The exact wiring configuration depends on the vehicle configuration and the hard
 | Channel 7   | LED Lights  |
 | Channel 8   | Camera Tilt Servo |
 
+The hardware also has other input/output ports including I<sup>2</sup>C and serial ports. These are the recommended connections for those ports.
+
 | Port                    | Connection                             |
 |------------------------:|:---------------------------------------|
 | I<sup>2</sup>C          | Pressure sensor (MS58XX)               |
