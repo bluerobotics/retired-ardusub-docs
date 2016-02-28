@@ -17,7 +17,7 @@ First-time setup of the autopilot includes downloading and installing the QGroun
 
 ## Wiring and Connections
 
-The exact wiring configuration depends on the vehicle configuration and the hardware used. The following is the standard use for all vehicles with six or fewer thrusters. Please see the [frame configurations](#) for standard thruster numbering.
+The exact wiring configuration depends on the vehicle configuration and the hardware used. The following is the standard used for all vehicles with six or fewer thrusters. Please see the [frame configurations](/introduction/#supported-frames) for standard thruster numbering.
 
 | PWM Channel | Connection  |
 |------------:|:------------|
