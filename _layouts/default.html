@@ -113,4 +113,11 @@
         {% include google_analytics.html %}
         {% endif %}
     </body>
+    <script>
+    // Table Bootstrap Classes
+    var tables = document.getElementsByTagName("table");
+    for (var i=0, max=tables.length; i < max; i++) {
+        tables[i].className += " table table-nonfluid";
+    }
+  </script>
 </html>
