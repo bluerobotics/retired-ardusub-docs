@@ -22,7 +22,9 @@ codeurl: 'https://ardusub.bluerobotics.com'
 page-order: [
     ['/introduction/'],
     ['/initial-setup/'],
-    ['/first-dive/']
+    ['/first-dive/'],
+    ['/advanced-configuration/'],
+    ['/optional-hardware/']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
