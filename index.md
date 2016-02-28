@@ -38,4 +38,5 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 - Continue to the [Introduction](/introduction/) section of this page.
 - Visit DIYDrones.com, a large community of enthusiasts largely clustered around the ArduPilot family of autopilots.
 - Use the [BlueRobotics Forums](http://bluerobotics.com/forums/) to ask support questions and advice.
+- Join the [Gitter developer chat room](https://gitter.im/bluerobotics/ardusub) to get quick support and contribute to development.
 - Read or join the *ardusub email* list once you’re ready to get involved with the development of the software platform.

@@ -2,8 +2,6 @@
 layout: default
 title: "Initial Setup"
 permalink: /initial-setup/
-category: setup
-order: 20
 nav:
 - Wiring and Connections: wiring-and-connections
 - Install QGroundControl: install-qgroundcontrol

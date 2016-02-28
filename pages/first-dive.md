@@ -2,7 +2,6 @@
 layout: default
 title: "First Dive"
 permalink: /first-dive/
-order: 30
 nav:
 - Joystick/Controller Functions: joystick-controller-functions
 - Dive Modes: dive-modes
