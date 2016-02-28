@@ -24,8 +24,9 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 ### ROVs
 
 - *ArduSub* currently supports two frame configurations:
-	- **Vectored Frame** giving excellent smooth control and stability 
-	- **BlueROV 6DOF Frame** for maneuvering in unique 6 degree-of-freedom control
+	- **BlueROV 6DOF Frame:** Maneuvers with unique 6 degree-of-freedom control
+	- **Vectored w/ Side-by-Side Vertical Thrusters:** Provides excellent smooth control and stability 
+	- **Vectored w/ Corner Vertical Thrusters:** Provides excellent smooth control, stability, and 6-DOF control
 - In the future, other frame types will be supported, such as:
 	- **3 and 4 thrusters** arranged with two thrusters for forward/turn and one or two for vertical
 
@@ -36,7 +37,6 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 ## More Info
 
 - Continue to the [Introduction](/introduction/) section of this page.
-- Visit DIYDrones.com, a large community of enthusiasts largely clustered around the ArduPilot family of autopilots.
+- Visit [DIYDrones.com](http://diydrones.com), a large community of enthusiasts largely clustered around the ArduPilot family of autopilots.
 - Use the [BlueRobotics Forums](http://bluerobotics.com/forums/) to ask support questions and advice.
 - Join the [Gitter developer chat room](https://gitter.im/bluerobotics/ardusub) to get quick support and contribute to development.
-- Read or join the *ardusub email* list once you’re ready to get involved with the development of the software platform.
