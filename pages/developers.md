@@ -65,15 +65,14 @@ The code begins running immediately once uploaded. For Linux-based autopilots, i
 
 One of the biggest additions to the ArduSub code is a six degree-of-freedom motor library that allows a wide variety of motor configurations to be set up easily. The motors libraries for each configuration are built on a set of higher-level motor classes as follows:
 
-```
-AP_Motors
-    |----AP_MotorsMatrix
-                |----AP_Motors6DOF
-                          |----AP_MotorsBlueROV
-                          |----AP_MotorsVectored
-                          |----AP_MotorsVectored6DOF
-                          |----AP_Motors[New configuration]
-```
+    AP_Motors
+        |---- AP_MotorsMulticopter
+                       |---- AP_MotorsMatrix
+                                    |---- AP_Motors6DOF
+                                                |---- AP_MotorsBlueROV
+                                                |---- AP_MotorsVectoredROV
+                                                |---- AP_MotorsVectored6DOF
+                                                |---- AP_Motors[New configuration]
 
 To add a new motor configuration, you will create a new frame type and implement the `AP_Motors[New configuration]` for the new frame configuration.
 
