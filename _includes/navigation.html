@@ -1,9 +1,9 @@
-<ul class="nav nav-list">
+<ul class="nav nav-stacked">
     <li class=nav-header style="text-transform:none;font-size:1.5em;">ArduSub</li>
 
     <li><a href="{{ site.baseurl }}/">Home</a></li>
 </ul>
-<ul class="nav nav-list">
+<ul class="nav nav-stacked">
     {% for permalink in site.page-order %}
         {% for page in site.pages %}
             {% if permalink[0] == page.permalink %}
@@ -36,4 +36,4 @@
     <li class=nav-header>Sponsored by</li>
 </ul>
 
-<a href="http://bluerobotics.com"><img src="{{ site.baseurl }}/images/br-logo-small.png" /></a>
+<a href="http://bluerobotics.com"><img src="{{ site.baseurl }}/images/br-logo-small.png" width="250px" alt="Blue Robotics Logo" /></a>
