@@ -96,6 +96,19 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | POS_Z_P           | 8.0 (above limit)    |
 | RATE_YAW_FILT_HZ  | 30                   |
 
+Please confirm that the following settings are set this way. These should be set by default but can be different on some platforms.
+
+| Parameter         | Value                |
+|------------------:|:---------------------|
+| RCMAP_PITCH       | 1                    |
+| RCMAP_ROLL        | 2                    |
+| RCMAP_THROTTLE    | 3                    |
+| RCMAP_YAW         | 4                    |
+| RCMAP_FORWARD*    | 6                    |
+| RCMAP_STRAFE*     | 7                    |
+
+*<small>These are shown in the "default group" panel.
+
 ### Setup Voltage and Current Measurement
 
 On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*.
