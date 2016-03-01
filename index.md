@@ -16,10 +16,10 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 
 <div class="row">
 	<div class="col-md-6">
-		<iframe width="400" height="300" src="https://www.youtube.com/embed/BV91zgzEFHs" frameborder="0" allowfullscreen></iframe>
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/BV91zgzEFHs" frameborder="0" allowfullscreen></iframe>
 	</div>
 	<div class="col-md-6">
-		<iframe width="400" height="300" src="https://www.youtube.com/embed/qVMpD-v-dfY" frameborder="0" allowfullscreen></iframe>
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/qVMpD-v-dfY" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
 
