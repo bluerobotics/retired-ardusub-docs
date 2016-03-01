@@ -8,7 +8,7 @@ nav:
 - Loading Firmware: loading-firmware
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
-- Configuring Parameters: configuring-hardware
+- Configuring Parameters: configuring-parameters
 ---
 
 # {{page.title}}
