@@ -25,7 +25,8 @@ page-order: [
     ['/first-dive/'],
     ['/advanced-configuration/'],
     ['/optional-hardware/'],
-    ['/developers/']
+    ['/developers/'],
+    ['/troubleshooting/']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
