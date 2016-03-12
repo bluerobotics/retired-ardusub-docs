@@ -8,6 +8,7 @@ nav:
 - Loading Firmware: loading-firmware
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
+- Configuring Joystick/Gamepad: configuring-joystick-gamepad
 - Configuring Parameters: configuring-parameters
 ---
 
@@ -78,6 +79,44 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 3. Click on *Accelerometers* and follow the instructions.
 4. Click on *Compass* and follow the instructions.
 5. When completed, the *Sensors* tab will no longer be red.
+
+## Configuring Joystick/Gamepad
+
+*ArduSub* provides a number of parameters to map controller buttons to various functions. This setup is required as there are no defaults configured.
+
+Each button can be assigned to one primary function and one alternate "shift" function. If the "shift" functions are used, then a "shift" button must be assigned. This works like the shift key on your keyboard, altering the functionality of other buttons while pressed.
+
+In the parameters, you will find a number of parameters named `BTN1_FUNCTION` and `BTN1_SFUNCTION` for each button. You can find the button numbers on the "joystick" tab in QGroundControl.
+
+The following is a list of functions that can be assigned to buttons:
+
+| Function                    | Assignment Value     |
+|----------------------------:|:---------------------|
+| None                        | 0                    |
+| Shift                       | 1                    |
+| Arm Toggle                  | 2                    |
+| Arm                         | 3                    |
+| Disarm                      | 4                    |
+| Mode Toggle                 | 5                    |
+| Stabilize Mode              | 6                    |
+| Depth Hold Mode (altHold)   | 7                    |
+| Camera Mount Tilt to Center | 21                   |
+| Camera Mount Tilt Up        | 22                   |
+| Camera Mount Tilt Down      | 23                   |
+| Camera Shutter Trigger      | 24                   |
+| Lights 1 Cycle Brightness   | 31                   |
+| Lights 1 Increase Brightness| 32                   |
+| Lights 1 Decrease Brightness| 33                   |
+| Lights 2 Cycle Brightness   | 34                   |
+| Lights 2 Increase Brightness| 35                   |
+| Lights 2 Decrease Brightness| 36                   |
+| Gain Toggle                 | 41                   |
+| Gain Increase               | 42                   |
+| Gain Decrease               | 43                   |
+| Trim roll right             | 44                   |
+| Trim roll left              | 45                   |
+| Trim pitch up               | 46                   |
+| Trim pitch down             | 47                   |
 
 ## Configuring Parameters
 
