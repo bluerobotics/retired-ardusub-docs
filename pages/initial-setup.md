@@ -8,7 +8,7 @@ nav:
 - Loading Firmware: loading-firmware
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
-- Configuring Joystick/Gamepad: configuring-joystick-gamepad
+- Configuring Joystick/Gamepad: configuring-joystickgamepad
 - Configuring Parameters: configuring-parameters
 ---
 
