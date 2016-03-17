@@ -98,8 +98,12 @@ The following is a list of functions that can be assigned to buttons:
 | Arm                         | 3                    |
 | Disarm                      | 4                    |
 | Mode Toggle                 | 5                    |
-| Stabilize Mode              | 6                    |
-| Depth Hold Mode (altHold)   | 7                    |
+| Enter Flight Mode 1         | 6                    |
+| Enter Flight Mode 2         | 7                    |
+| Enter Flight Mode 3         | 8                    |
+| Enter Flight Mode 4         | 9                    |
+| Enter Flight Mode 5         | 10                   |
+| Enter Flight Mode 6         | 11                   |
 | Camera Mount Tilt to Center | 21                   |
 | Camera Mount Tilt Up        | 22                   |
 | Camera Mount Tilt Down      | 23                   |
