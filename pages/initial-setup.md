@@ -159,6 +159,7 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | ARMING_CHECK      | Disabled             |
 | ATC_ACCEL_Y_MAX   | Disabled             |
 | BRD_SAFETYENABLE  | Disabled             |
+| FS_CRASH_CHECK    | Disabled             |
 | DISARM_DELAY      | 0                    |
 | EK_ALT_NOISE      | 0.1                  |
 | GND_PRIMARY       | 2ndBaro              |
