@@ -10,6 +10,7 @@ nav:
 - Calibration: calibration
 - Configuring Joystick/Gamepad: configuring-joystickgamepad
 - Configuring Parameters: configuring-parameters
+- Configuring Motor Directions: configuring-motor-directions
 ---
 
 # {{page.title}}
@@ -64,7 +65,34 @@ If using a serial port, simply connect the port to the computer and open QGC. Th
 
 ### Ethernet Connection with Companion Computer
 
-If using an Ethernet connection with companion computer, you must [to be completed].
+If using an Ethernet connection with companion computer, you must must connect to the autopilot via `mavproxy`. This setup will work with a variety of configurations including:
+
+- PixHawk Connected to Raspberry Pi via USB or serial
+
+#### Raspberry Pi Initial Setup
+
+We first need to configure the Raspberry Pi to connect directly over Ethernet without a router. This will require setting a static IP address so we can reliably connect to the Raspberry Pi. You can do this by adding the following to the end of the line in `/boot/cmdline.txt`.
+
+```
+ip=169.254.2.2
+```
+
+You should also set up your computer to have a static IP address when connected to the Ethernet connection. We recommend using the address 169.254.2.1.
+
+Next you'll need to get the companion computer scripts. Make sure you have an internet connection to the Raspberry Pi and enter the following:
+
+```
+sudo apt-get update
+sudo apt-get install gstreamer1.0
+git clone https://github.com/bluerobotics/companion.git
+```
+
+Next, we'll set up the companion computer scripts to run automatically at boot. Enter the following commands to do so:
+
+```
+cd companion/RPI2/Raspbian
+sudo ./rov-setup.sh
+```
 
 ### Ethernet Connection with Linux Autopilot (Navio, BBBmini, etc.)
 
@@ -152,6 +180,21 @@ Please confirm that the following settings are set this way. These should be set
 
 *<small>These are shown in the "default group" panel.
 
+The following are the recommended control system parameters for the BlueROV. These can be changes to make the response faster or slower and make the vehicle more or less stable.
+
+| Parameter         | Value                |
+|------------------:|:---------------------|
+| ACCEL_Z_D         | 0.0                  |
+| ACCEL_Z_I         | 3.0                  |
+| ACCEL_Z_IMAX      | 1000.0               |
+| ACCEL_Z_P         | 1.0                  |
+| PILOT_ACCEL_Z     | 50.0                 |
+| POS_Z_P           | 3.0                  |
+| STB_PIT_P         | 12.0                 |
+| STB_RLL_P         | 12.0                 |
+| STB_YAW_P         | 12.0                 |
+| VEL_Z_P           | 8.0                  |
+
 ### Setup Voltage and Current Measurement
 
 On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*.
@@ -171,3 +214,15 @@ We also recommend checking the *Stabilize* box, which will enable auto-stabiliza
 The lights feature is currently setup to support lights that use a standard servo PWM signal for control. Until light support is officially added to QGC, the "Gimbal Roll" settings are used to connect the light input to a servo output.
 
 Select *Channel 7* for the "Output channel" and *RC9* for the "Input channel".
+
+## Configuring Motor Directions
+
+Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_MOT1_REVERSE` for motors 1-8 and valid values are `1` (normal) or `-1` (reverse).
+
+We generally follow this process to check motor rotation directions:
+
+1. Arm vehicle after completing all of the setup steps above
+2. Move the "forward" joystick forward and verify that the thrusters that produce some forward thrust are operating in the correct direction
+3. Move the "vertical" joystick upwards and verify that the thrusters that produce some vertical thrust are operating int the correct direction
+
+Provided that the correct frame configuration was chosen during compilation, you should not need to perform any more validation than that.

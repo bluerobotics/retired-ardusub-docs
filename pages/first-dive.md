@@ -8,6 +8,8 @@ nav:
 - Arming and Disarming: arming-and-disarming
 - Tuning: tuning
 - Pre-Dive Checklist: pre-dive-checklist
+- Launching Video Stream: launching-video-stream
+- Recording Video: recording-video
 ---
 
 # {{page.title}}
@@ -49,3 +51,21 @@ There are a number of control system tuning parameters that can be adjusted to c
 ## Pre-Dive Checklist
 
 To be completed.
+
+## Launching Video Stream
+
+The following command shows how to start a video stream from the Raspberry Pi that can be automatically displayed in the QGroundControl display.
+
+```
+raspivid -n -fl -w 1280 -h 720 -b 10000000 -fps 30 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote ip> port=5000
+```
+
+The following will stream video at 30 fps and 1080p resolution, typically with latency of around 300ms.
+
+```
+raspivid -n -md 2 -b 25000000 -fps 30 -t 0 -awb off -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote ip> port=5000 
+```
+
+## Recording Video
+
+On Mac we recommend using Quicktime to record the entire screen during operation. This will save the telemetry data that is displayed on the screen as well.
