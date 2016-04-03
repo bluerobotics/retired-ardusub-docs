@@ -76,9 +76,20 @@ If using an Ethernet-based tether option and computer-based autopilot, then stre
 
 ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. Currently supported are:
 
-- **BlueROV Configuration** with 6-DOF thruster positioning.
-- **Vectored ROV w/ Side-by-Side Vertical Thrusters**, a common thruster configuration among work-class and research-class ROVs.
-- **Vectored ROV w/ Corner Vertical Thrusters**, an 8-thruster configuration with 6-DOF control and heavy lifting capacity.
+<div class="row">
+	<div class="col-md-3">
+		<img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
+		<p class="text-center"><strong>BlueROV Configuration</strong> with 6-DOF thruster positioning.</p>
+	</div>
+	<div class="col-md-3">
+		<img src="/images/vectored-frame.png" class="img-responsive img-center" style="max-height:250px;">
+		<p class="text-center"><strong>Vectored ROV</strong> with side-by-side vertical thrusters.</p>
+	</div>
+	<div class="col-md-6">
+		<img src="/images/vectored6dof-frame.png" class="img-responsive img-center" style="max-height:250px;">
+		<p class="text-center"><strong>Vectored ROV w/ Four Vertical Thrusters</strong>, an 8-thruster configuration with 6-DOF control and heavy-lifting capacity.</p>
+	</div>	
+</div>
 
 ## Sensors and Actuators
 
