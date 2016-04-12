@@ -47,7 +47,7 @@ The available board types can be seen by entering `make` with no arguments. Belo
 |---------------:|:-------------------------------------------------------------------- |
 | `bluerov`      | Compile for BlueROV thruster configuration                           |
 | `vectored`     | Compile for vectored w/ side-by-side vertical thruster configuration |
-| `vectored6DOF` | Compile for vectored w/ corner vertical thruster configuration       |
+| `vectored6dof` | Compile for vectored w/ corner vertical thruster configuration       |
 
 ## Uploading
 
