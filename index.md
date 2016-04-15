@@ -30,21 +30,6 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 - A [suitable ROV or AUV](http://bluerobotics.com) for use with the software
 - Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators
 
-## ROV/AUV Types
-
-### ROVs
-
-- *ArduSub* currently supports two frame configurations:
-	- **BlueROV 6DOF Frame:** Maneuvers with unique 6 degree-of-freedom control
-	- **Vectored w/ Side-by-Side Vertical Thrusters:** Provides excellent smooth control and stability 
-	- **Vectored w/ Corner Vertical Thrusters:** Provides excellent smooth control, stability, and 6-DOF control
-- In the future, other frame types will be supported, such as:
-	- **3 and 4 thrusters** arranged with two thrusters for forward/turn and one or two for vertical
-
-### AUVs
-
-- *ArduSub* has not yet been tested with any AUVs but support will be added in the future
-
 ## More Info
 
 - Continue to the [Introduction](/introduction/) section of this page.
