@@ -167,6 +167,7 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | PILOT_ACCEL_Z     | 50 cm/s/s            |
 | POS_Z_P           | 8.0 (above limit)    |
 | RATE_YAW_FILT_HZ  | 30                   |
+| THR_MIN           | 0                    |
 
 Please confirm that the following settings are set this way. These should be set by default but can be different on some platforms.
 
