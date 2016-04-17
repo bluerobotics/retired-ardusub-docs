@@ -114,7 +114,7 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 
 Each button can be assigned to one primary function and one alternate "shift" function. If the "shift" functions are used, then a "shift" button must be assigned. This works like the shift key on your keyboard, altering the functionality of other buttons while pressed.
 
-In the parameters, you will find a number of parameters named `BTN1_FUNCTION` and `BTN1_SFUNCTION` for each button. You can find the button numbers on the "joystick" tab in QGroundControl.
+In the parameters, you will find a number of parameters named `BTN1_FUNCTION` (normal function) and `BTN1_SFUNCTION` (shift function) for each button. You can find the button numbers on the "joystick" tab in QGroundControl.
 
 The following is a list of functions that can be assigned to buttons:
 
