@@ -52,10 +52,12 @@ ArduSub is compatible with many different ROV frames. [Please see here](#support
 With [DroneCode](http://dronecode.org) compatibility, the ArduSub controller is usable with many different hardware options including:
 
 - **PixHawk** from 3DRobotics
-- **PixRacer** from AUAV
+- **PixRacer* ** from AUAV
 - **Navio+/Navio2** from Emlid
-- **Erle Brain, PXFmini** from Erle Robotics
+- **Erle Brain, PXFmini* ** from Erle Robotics
 - **BBBmini** shield for BeagleBone Black
+
+*These options have 8 or less PWM outputs and may not support all ArduSub frame types
 
 ### Tether and Tether Interfaces
 
