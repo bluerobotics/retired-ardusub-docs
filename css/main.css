@@ -30,14 +30,7 @@ h3 {font-size:1.4em;}
 h4 {font-size:1.2em;}
 h5 {font-size:1.0em;}
 
-#header {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
-    font-size:1.1em;
-    font-weight:600;
-}
-
-#header a:hover {
+a:hover {
     text-decoration: none;
 }
 
@@ -79,8 +72,12 @@ h5 {font-size:1.0em;}
     text-transform: uppercase;
 }
 
-.nav > li > a {
+.sidenav > li > a {
     padding: 2px;
+}
+
+.navbar-nav > li > a {
+   line-height: 30px;
 }
 
 body.rtl {
@@ -123,5 +120,12 @@ code {
 .img-center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.anchorjs-link:hover {
+  color: #2500AD;
+}
+*:hover > .anchorjs-link {
+  transition: color .25s linear;
 }
 

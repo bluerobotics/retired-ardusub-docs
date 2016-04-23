@@ -1,9 +1,9 @@
-<ul class="nav nav-stacked">
+<ul class="sidenav nav nav-stacked">
     <li class=nav-header style="text-transform:none;font-size:1.5em;">ArduSub</li>
 
     <li><a href="{{ site.baseurl }}/">Home</a></li>
 </ul>
-<ul class="nav nav-stacked">
+<ul class="sidenav nav nav-stacked">
     {% for permalink in site.page-order %}
         {% for page in site.pages %}
             {% if permalink[0] == page.permalink %}
@@ -20,7 +20,7 @@
     e.g. <li class=divider></li> first to break up the content. -->
 </ul>
 
-<ul class="nav nav-list">
+<ul class="sidenav nav nav-list">
     <li class="divider"></li>
 
     <li class=nav-header>Visit the Code</li>
@@ -30,7 +30,7 @@
 
 <hr />
 
-<ul class="nav nav-list">
+<ul class="sidenav nav nav-list">
     <li class=nav-header>Sponsored by</li>
 
     <a href="http://bluerobotics.com"><img src="{{ site.baseurl }}/images/br-logo-small.png" width="250px" alt="Blue Robotics Logo" /></a>

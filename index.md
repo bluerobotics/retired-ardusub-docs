@@ -6,7 +6,7 @@ permalink: /
 
 <div style="position:relative;width:100%">
 	<img src="/images/bluerov-up-1.jpg" alt="Reef picture from ArduSub" class="img-responsive" />
-	<div style="position:absolute;top:125px;left:0;width:100%;color:white;text-shadow:none;background: rgba(0,0,0,0.7);padding:15px;"> 
+	<div style="position:absolute;top:30%;left:0;width:100%;color:white;text-shadow:none;background: rgba(0,0,0,0.7);padding:15px;"> 
 		<h1>ArduSub</h1>
 		<h3>Open-Source Subsea Vehicle Control</h3>
 	</div>
