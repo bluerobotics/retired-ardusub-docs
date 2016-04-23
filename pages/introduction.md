@@ -93,7 +93,7 @@ ArduSub includes a high-level motor library that can configure motors in any con
 	</div>	
 </div>
 
-<div class="row">
+<!--<div class="row">
 	<div class="col-md-4">
 		<img src="/images/simplerov-3.png" class="img-responsive img-center" style="max-height:250px;">
 		<p class="text-center"><strong>Simple ROV</strong> with a single vertical thruster.</p>
@@ -102,7 +102,7 @@ ArduSub includes a high-level motor library that can configure motors in any con
 		<img src="/images/simplerov-4.png" class="img-responsive img-center" style="max-height:250px;">
 		<p class="text-center"><strong>Simple ROV</strong> with two vertical thrusters.</p>
 	</div>
-</div>
+</div>-->
 
 ## Sensors and Actuators
 
