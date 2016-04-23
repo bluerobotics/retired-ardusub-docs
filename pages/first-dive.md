@@ -18,25 +18,15 @@ This section covers the information you will need to know for your first dive an
 
 ## Joystick/Controller Functions
 
-The gamepad controls the ROV during operation. It has been tested with the Microsoft Xbox controller and the Logitech F310. The following joysticks and buttons are used:
+The gamepad controls the ROV during operation. It has been tested with the Microsoft Xbox controller and the Logitech F310. The function of the buttons [depends on those mapped by the user](/initial-setup/#configuring-joystickgamepad) but is usually configured to the following:
 
-- **Left Stick:** Forward and strafe input
-- **Right Stick:** Throttle and yaw input
-- **Start Button:** Arm vehicle
-- **Back Button:** Disarm vehicle
-- **Y Button:** Switch to althold (learning) mode
-- **B Button:** Switch to stabilize (manual) mode
-- **Right Bumper:** Increase light brightness
-- **Left Bumper:** Decrease light brightness
-- **Buttonpad Up/Down Arrows:** Tilt camera (if applicable and set up in QGC)
-- **Buttonpad Left/Right Arrows:** Increase/decrease roll trim (if IMU is not completely level)
-- **Left Joystick Click:** Reset camera tilt angle
+<img src="/images/controller.png" class="img-responsive" />
 
 ## Dive Modes
 
-**Stabilize Mode**, shown in QGC as **Manual Mode**, is the default mode of operation. The vehicle automatically stabilizes to level roll and pitch angle and maintains heading when not commanded to turn. The throttle control is left entirely to the pilot.
+**Stabilize Mode** is the default mode of operation. The vehicle automatically stabilizes to level roll and pitch angle and maintains heading when not commanded to turn. The vertical control is left entirely to the pilot.
 
-**AltHold Mode**, shown in QGC as **Learning Mode**, is the same as stabilize mode with the addition of automatic depth holding. The throttle control is used to increase or decrease the holding depth.
+**AltHold Mode** is the same as stabilize mode with the addition of automatic depth holding. The throttle control is used to increase or decrease the holding depth.
 
 ## Arming and Disarming
 

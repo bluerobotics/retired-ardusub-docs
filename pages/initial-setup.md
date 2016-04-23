@@ -26,11 +26,13 @@ The exact wiring configuration depends on the vehicle configuration and the hard
 | Channel 1   | Thruster #1 |
 | Channel 2   | Thruster #2 |
 | Channel 3   | Thruster #3 |
-| Channel 4   | Thruster #4 |
-| Channel 5   | Thruster #5 |
-| Channel 6   | Thruster #6 |
-| Channel 7   | LED Lights  |
-| Channel 8   | Camera Tilt Servo |
+| Channel 4   | Thruster #4 (if used) |
+| Channel 5   | Thruster #5 (if used) |
+| Channel 6   | Thruster #6 (if used) |
+| Channel 7   | Thruster #7 (if used) |
+| Channel 8   | Thruster #8 (if used) |
+| User Configurable | LED Lights  |
+| User Configurable | Camera Tilt Servo |
 
 The hardware also has other input/output ports including I<sup>2</sup>C and serial ports. These are the recommended connections for those ports.
 
@@ -111,6 +113,10 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 ## Configuring Joystick/Gamepad
 
 *ArduSub* provides a number of parameters to map controller buttons to various functions. This setup is required as there are no defaults configured.
+
+We recommend the button assignments shown in the image below:
+
+<img src="/images/controller.png" class="img-responsive" />
 
 Each button can be assigned to one primary function and one alternate "shift" function. If the "shift" functions are used, then a "shift" button must be assigned. This works like the shift key on your keyboard, altering the functionality of other buttons while pressed.
 
@@ -203,11 +209,11 @@ On the *Power* tab choose the appropriate setup. If using the standard 3DR Power
 
 ### Flight Mode Setup
 
-Currently only the *Stabilize* (Manual) and *AltHold* (Learning) modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 6", which should be set to *AltHold*.
+Currently only the *Stabilize* and *AltHold* modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 6", which should be set to *AltHold*.
 
 ### Camera Tilt Setup (if used)
 
-Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose *Channel 8* (or whichever channel the servo is plugged into) for "Output channel" and *RC8* for "Input channel". Select *Servo* for the "Type" under "Gimbal Settings" on the right.
+Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Select *Servo* for the "Type" under "Gimbal Settings" on the right.
 
 We also recommend checking the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle.
 
@@ -215,7 +221,7 @@ We also recommend checking the *Stabilize* box, which will enable auto-stabiliza
 
 The lights feature is currently setup to support lights that use a standard servo PWM signal for control. Until light support is officially added to QGC, the "Gimbal Roll" settings are used to connect the light input to a servo output.
 
-Select *Channel 7* for the "Output channel" and *RC9* for the "Input channel".
+Select an available channel for the "Output channel" and *RC9* for the "Input channel".
 
 ## Configuring Motor Directions
 
