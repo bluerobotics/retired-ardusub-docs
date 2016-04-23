@@ -4,9 +4,15 @@ title: "Home"
 permalink: /
 ---
 
-# {{ page.title }}
+<div style="position:relative;width:100%">
+	<img src="/images/bluerov-up-1.jpg" alt="Reef picture from ArduSub" class="img-responsive" />
+	<div style="position:absolute;top:125px;left:0;width:100%;color:white;text-shadow:none;background: rgba(0,0,0,0.7);padding:15px;"> 
+		<h1>ArduSub</h1>
+		<h3>Open-Source Subsea Vehicle Control</h3>
+	</div>
+</div>
 
-**Firmware for Remote-Operated and Autonomous Capabilities in Underwater Vehicles**
+## What is ArduSub?
 
 The *ArduSub* project is a fully-featured, open-source controller for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs). Based on the popular *ArduCopter* code, the *ArduSub* code has extensive capabilities out of the box including feedback stability control, depth and heading hold, and autonomous position control if provided with position feedback.
 

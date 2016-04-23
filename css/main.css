@@ -99,7 +99,6 @@ body.rtl .row-fluid [class*="span"] {
 body.rtl .row-fluid [class*="span"]:first-child {
 	margin-right: 0;
 }
-
 body.rtl ul, body.rtl ol {
     margin: 0 25px 10px 0;
 }

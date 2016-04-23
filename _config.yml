@@ -1,6 +1,6 @@
 # Site title and subtitle. This is used in _includes/header.html
 title: 'ArduSub'
-subtitle: 'Open-Source ROV/AUV Firmware'
+subtitle: 'Open-Source Subsea Vehicle Control'
 
 
 # if you wish to integrate disqus on pages set your shortname here
@@ -23,8 +23,6 @@ page-order: [
     ['/introduction/'],
     ['/initial-setup/'],
     ['/first-dive/'],
-    ['/advanced-configuration/'],
-    ['/optional-hardware/'],
     ['/developers/'],
     ['/troubleshooting/']
 ]

@@ -40,8 +40,8 @@ There are numerous potential combinations of hardware and vehicles compatible wi
 - Autopilot controller like the 3DR PixHawk
 - Tether for communication via serial or Ethernet
 - Laptop computer with QGroundControl installed
-- USB gamepad or joystick controller
-- Pressure sensor for depth measurement (optional)
+- USB gamepad or joystick controller ([example](http://www.amazon.com/Logitech-940-000110-Gamepad-F310/dp/B003VAHYQY))
+- Pressure sensor for depth measurement ([example](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/))
 
 ### ROV
 
@@ -79,18 +79,29 @@ If using an Ethernet-based tether option and computer-based autopilot, then stre
 ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. Currently supported are:
 
 <div class="row">
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
 		<p class="text-center"><strong>BlueROV Configuration</strong> with 6-DOF thruster positioning.</p>
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-4">
 		<img src="/images/vectored-frame.png" class="img-responsive img-center" style="max-height:250px;">
 		<p class="text-center"><strong>Vectored ROV</strong> with side-by-side vertical thrusters.</p>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-4">
 		<img src="/images/vectored6dof-frame.png" class="img-responsive img-center" style="max-height:250px;">
 		<p class="text-center"><strong>Vectored ROV w/ Four Vertical Thrusters</strong>, an 8-thruster configuration with 6-DOF control and heavy-lifting capacity.</p>
 	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<img src="/images/simplerov-3.png" class="img-responsive img-center" style="max-height:250px;">
+		<p class="text-center"><strong>Simple ROV</strong> with a single vertical thruster.</p>
+	</div>
+	<div class="col-md-4">
+		<img src="/images/simplerov-4.png" class="img-responsive img-center" style="max-height:250px;">
+		<p class="text-center"><strong>Simple ROV</strong> with two vertical thrusters.</p>
+	</div>
 </div>
 
 ## Sensors and Actuators
