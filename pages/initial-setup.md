@@ -53,9 +53,11 @@ We recommend using the most recent daily build of QGroundControl, which can be [
 
 ## Loading Firmware
 
-During the early stage of ArduSub development (now), there are no compiled firmware files available and the firmware must be compiled directly. 
+Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). Firmware is only available for the following hardware right now:
 
-Please see the [Developer section](/developers/) for instructions on how to do so.
+* Pixhawk (px-v2)
+
+Please see the [Developer section](/developers/) for instructions on how to compile from source.
 
 ## Connect QGC to Controller
 
