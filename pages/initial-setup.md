@@ -158,7 +158,7 @@ The following is a list of functions that can be assigned to buttons:
 
 ## Configuring Parameters
 
-A number of parameters should be adjusted at startup for use with ArduSub. The following table shows the currently recommmended parameters to change.
+A number of parameters should be adjusted at startup for use with ArduSub. The following table shows the currently recommended parameters to change.
 
 | Parameter         | Value                |
 |------------------:|:---------------------|
