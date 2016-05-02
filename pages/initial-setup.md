@@ -59,17 +59,17 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 Please see the [Developer section](/developers/) for instructions on how to compile from source.
 
-### Loading Through QGC
+### Loading Through QGroundControl
 
-1. Install the most recent version of [QGroundControl](#) and navigate to the *Firmware* tab of the settings page.
+Install the most recent version of [QGroundControl](#) and navigate to the *Firmware* tab of the settings page.
 
 <img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
 
-2. Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. Choose "ArduPilot Flight Stack" and then check the "Advanced Settings" checkbox. From the dropdown box that appears, choose "Custom firmware file...".
+Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. Choose "ArduPilot Flight Stack" and then check the "Advanced Settings" checkbox. From the dropdown box that appears, choose "Custom firmware file...".
 
 <img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
 
-3. Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you [download the most recent firmware](firmware.ardusub.com) and choose it here.
+Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you [download the most recent firmware](firmware.ardusub.com) and choose it here.
 
 The firmware will upload the Pixhawk and you'll see the following printout and success message.
 
@@ -136,7 +136,7 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 
 We recommend the button assignments shown in the image below:
 
-<img src="/images/controller.png" class="img-responsive" />
+<img src="/images/controller.png" class="img-responsive img-center" />
 
 Each button can be assigned to one primary function and one alternate "shift" function. If the "shift" functions are used, then a "shift" button must be assigned. This works like the shift key on your keyboard, altering the functionality of other buttons while pressed.
 
@@ -227,25 +227,33 @@ The following are the recommended control system parameters for the BlueROV. The
 
 On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*.
 
+<img src="/images/qgc/power-setup-1.png" class="img-responsive img-center" />
+
 ### Flight Mode Setup
 
-Currently only the *Stabilize* and *AltHold* modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 6", which should be set to *AltHold*.
+Currently only the *Stabilize* and *AltHold* modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 2", which should be set to *AltHold*. As new flight modes are added to ArduSub, these can be configured to activate those modes.
+
+<img src="/images/qgc/flight-mode-setup-1.png" class="img-responsive img-center" />
 
 ### Camera Tilt Setup (if used)
 
 Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Select *Servo* for the "Type" under "Gimbal Settings" on the right.
 
-We also recommend checking the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle.
+<img src="/images/qgc/camera-tilt-setup-1.png" class="img-responsive img-center" />
+
+Is desired, you can check the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle. We generally leave this unchecked.
 
 ### Lights Setup
 
 The lights feature is currently setup to support lights that use a standard servo PWM signal for control. Until light support is officially added to QGC, the "Gimbal Roll" settings are used to connect the light input to a servo output.
 
-Select an available channel for the "Output channel" and *RC9* for the "Input channel".
+Select an available channel for the "Output channel" and *RC9* for the "Input channel". Make sure that "Servo reverse" and "Stabilize" and *not* checked. Set the "Servo PWM limits" to 1100 to 1900.
+
+<img src="/images/qgc/lights-setup-1.png" class="img-responsive img-center" />
 
 ## Configuring Motor Directions
 
-Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_MOT1_REVERSE` for motors 1-8 and valid values are `1` (normal) or `-1` (reverse).
+Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_1_REVERSE` for motors 1-8 and valid values are `1` (normal) or `-1` (reverse).
 
 We generally follow this process to check motor rotation directions:
 
