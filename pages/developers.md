@@ -17,9 +17,7 @@ nav:
 
 The ArduSub code is maintained in a *git* repository. The best way to get the code is to clone that repository.
 
-``` bash
-git clone https://github.com/bluerobotics/ardusub.git
-```
+	git clone https://github.com/bluerobotics/ardusub.git
 
 You can also download the code as a zip file from the right sidebar of the <a href="https://github.com/bluerobotics/ardusub.git">Github website</a>.
 
@@ -31,15 +29,11 @@ You can also download the code as a zip file from the right sidebar of the <a hr
 
 To compile the ArduSub branch, first `cd ArduSub` to enter the directory and then use a command with the following format:
 
-``` bash
-make [board type]-[frame type]
-```
+	make [board type]-[frame type]
 
 For example,
 
-``` bash
-make px4-v2-vectored
-```
+	make px4-v2-vectored
 
 The available board types can be seen by entering `make` with no arguments. Below are the available frame types.
 
@@ -53,9 +47,7 @@ The available board types can be seen by entering `make` with no arguments. Belo
 
 To upload the code to a PixHawk or similar controller, add `-upload` to the build command. For example:
 
-``` bash
-make px4-v2-vectored-upload
-```
+	make px4-v2-vectored-upload
 
 ## Running
 

@@ -114,7 +114,7 @@ ArduSub includes a high-level motor library that can configure motors in any con
 
 In addition to the standard onboard sensors (IMU, compass), the ArduSub controller supports a number of external sensors including:
 
-- Pressure/depth sensors for measurement and auto depth-hold
+- Pressure/depth sensors for measurement and auto depth-hold ([example](https://www.bluerobotics.com/store/electronics/bar30-sensor-r1/))
 - GPS for position at the surface (does not work underwater)
 
 In the future the ArduSub controller will be able to interface with more sensors such as depth sounders, scanning sonars, temperature sensors, and conductivity sensors.
