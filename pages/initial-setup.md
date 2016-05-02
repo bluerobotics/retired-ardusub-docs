@@ -19,7 +19,7 @@ First-time setup of the autopilot includes downloading and installing the QGroun
 
 ## Wiring and Connections
 
-The exact wiring configuration depends on the vehicle configuration and the hardware used. The following is the standard used for all vehicles with six or fewer thrusters. Please see the [frame configurations](/introduction/#supported-frames) for standard thruster numbering.
+The exact wiring configuration depends on the vehicle configuration and the hardware used. The following are the standard channel assignments. Please see the [frame configurations](/introduction/#supported-frames) for standard thruster numbering.
 
 | PWM Channel | Connection  |
 |------------:|:------------|
@@ -59,6 +59,22 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 Please see the [Developer section](/developers/) for instructions on how to compile from source.
 
+### Loading Through QGC
+
+1. Install the most recent version of [QGroundControl](#) and navigate to the *Firmware* tab of the settings page.
+
+<img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
+
+2. Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl will show a firmware selection box on the right. Choose "ArduPilot Flight Stack" and then check the "Advanced Settings" checkbox. From the dropdown box that appears, choose "Custom firmware file...".
+
+<img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
+
+3. Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you [download the most recent firmware](firmware.ardusub.com) and choose it here.
+
+The firmware will upload the Pixhawk and you'll see the following printout and success message.
+
+<img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
+
 ## Connect QGC to Controller
 
 The controller can be connected to QGC through several different methods depending on the hardware used.
@@ -87,7 +103,9 @@ Next you'll need to get the companion computer scripts. Make sure you have an in
 
 ```
 sudo apt-get update
+
 sudo apt-get install gstreamer1.0
+
 git clone https://github.com/bluerobotics/companion.git
 ```
 

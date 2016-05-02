@@ -63,6 +63,10 @@ With [DroneCode](http://dronecode.org) compatibility, the ArduSub controller is 
 
 ArduSub is compatible with both serial and Ethernet based communication interfaces. The hardware autopilot used must support the option that you choose. The Pixhawk only supported a serial connection but can be connect to Ethernet through a companion computer. Other autopilots support Ethernet natively.
 
+There are several available tether interface boards that work well with ArduSub:
+
+* To be completed.
+
 ### Topside and Ground Control Station
 
 The ArduSub software is designed primarily to interface through QGroundControl (QGC), an open-source, cross-platform user interface for drones of all types. The interface connects to the ArduSub controller through the tether and displays vehicle status information and allows parameters and settings to be updated.
@@ -103,6 +107,8 @@ ArduSub includes a high-level motor library that can configure motors in any con
 		<p class="text-center"><strong>Simple ROV</strong> with two vertical thrusters.</p>
 	</div>
 </div>-->
+
+[Please see here](/developers/#making-a-custom-configuration) if you would like to add your own configuration.
 
 ## Sensors and Actuators
 
