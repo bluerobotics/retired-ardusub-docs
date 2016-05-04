@@ -204,7 +204,7 @@ Please confirm that the following settings are set this way. These should be set
 | RCMAP_THROTTLE    | 3                    |
 | RCMAP_YAW         | 4                    |
 | RCMAP_FORWARD*    | 6                    |
-| RCMAP_STRAFE*     | 7                    |
+| RCMAP_LATERAL*    | 7                    |
 
 *<small>These are shown in the "default group" panel.
 
