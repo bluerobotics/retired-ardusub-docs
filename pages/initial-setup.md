@@ -162,6 +162,7 @@ The following is a list of functions that can be assigned to buttons:
 | Camera Mount Tilt Up        | 22                   |
 | Camera Mount Tilt Down      | 23                   |
 | Camera Shutter Trigger      | 24                   |
+| Camera Source Toggle        | 25                   |
 | Lights 1 Cycle Brightness   | 31                   |
 | Lights 1 Increase Brightness| 32                   |
 | Lights 1 Decrease Brightness| 33                   |
@@ -171,10 +172,13 @@ The following is a list of functions that can be assigned to buttons:
 | Gain Toggle                 | 41                   |
 | Gain Increase               | 42                   |
 | Gain Decrease               | 43                   |
-| Trim roll right             | 44                   |
-| Trim roll left              | 45                   |
-| Trim pitch up               | 46                   |
-| Trim pitch down             | 47                   |
+| Trim Roll Right             | 44                   |
+| Trim Roll Left              | 45                   |
+| Trim Pitch Up               | 46                   |
+| Trim Pitch Down             | 47                   |
+| Input Hold Toggle           | 48                   |
+
+*These functions are not yet implemented
 
 ## Configuring Parameters
 
