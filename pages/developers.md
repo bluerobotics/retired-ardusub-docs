@@ -42,6 +42,7 @@ The available board types can be seen by entering `make` with no arguments. Belo
 | `bluerov`      | Compile for BlueROV thruster configuration                           |
 | `vectored`     | Compile for vectored w/ side-by-side vertical thruster configuration |
 | `vectored6dof` | Compile for vectored w/ corner vertical thruster configuration       |
+| `simplerov`    | Compile for simple 3-4 thruster ROV                                  |
 
 ## Uploading
 
@@ -64,6 +65,7 @@ One of the biggest additions to the ArduSub code is a six degree-of-freedom moto
                                                 |---- AP_MotorsBlueROV
                                                 |---- AP_MotorsVectoredROV
                                                 |---- AP_MotorsVectored6DOF
+                                                |---- AP_MotorsSimpleROV
                                                 |---- AP_Motors[New configuration]
 
 To add a new motor configuration, you will create a new frame type and implement the `AP_Motors[New configuration]` for the new frame configuration.

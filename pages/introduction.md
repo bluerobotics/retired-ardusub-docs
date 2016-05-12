@@ -85,28 +85,28 @@ ArduSub includes a high-level motor library that can configure motors in any con
 <div class="row">
 	<div class="col-md-4">
 		<img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
-		<p class="text-center"><strong>BlueROV Configuration</strong> with 6-DOF thruster positioning.</p>
+		<p class="text-center"><strong>BlueROV Configuration</strong> with 6-DOF thruster positioning. (Frame: <code>bluerov</code>)</p>
 	</div>
 	<div class="col-md-4">
 		<img src="/images/vectored-frame.png" class="img-responsive img-center" style="max-height:250px;">
-		<p class="text-center"><strong>Vectored ROV</strong> with side-by-side vertical thrusters.</p>
+		<p class="text-center"><strong>Vectored ROV</strong> with side-by-side vertical thrusters. (Frame: <code>vectored</code>)</p>
 	</div>
 	<div class="col-md-4">
 		<img src="/images/vectored6dof-frame.png" class="img-responsive img-center" style="max-height:250px;">
-		<p class="text-center"><strong>Vectored ROV w/ Four Vertical Thrusters</strong>, an 8-thruster configuration with 6-DOF control and heavy-lifting capacity.</p>
+		<p class="text-center"><strong>Vectored ROV w/ Four Vertical Thrusters</strong>, an 8-thruster configuration with 6-DOF control and heavy-lifting capacity. (Frame: <code>vectored6dof</code>)</p>
 	</div>	
 </div>
 
-<!--<div class="row">
+<div class="row">
 	<div class="col-md-4">
 		<img src="/images/simplerov-3.png" class="img-responsive img-center" style="max-height:250px;">
-		<p class="text-center"><strong>Simple ROV</strong> with a single vertical thruster.</p>
+		<p class="text-center"><strong>ROV</strong> with a single vertical thruster. (Frame: <code>simplerov</code>)</p>
 	</div>
 	<div class="col-md-4">
 		<img src="/images/simplerov-4.png" class="img-responsive img-center" style="max-height:250px;">
-		<p class="text-center"><strong>Simple ROV</strong> with two vertical thrusters.</p>
+		<p class="text-center"><strong>ROV</strong> with side-by-side vertical thrusters. (Frame: <code>simplerov</code>)</p>
 	</div>
-</div>-->
+</div>
 
 [Please see here](/developers/#making-a-custom-configuration) if you would like to add your own configuration.
 
