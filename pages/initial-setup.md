@@ -142,6 +142,8 @@ Each button can be assigned to one primary function and one alternate "shift" fu
 
 In the parameters, you will find a number of parameters named `BTN1_FUNCTION` (normal function) and `BTN1_SFUNCTION` (shift function) for each button. You can find the button numbers on the "joystick" tab in QGroundControl.
 
+Note, if using a Logitech gamepad, pressing the "mode" button causes the left joystick and the button pad to switch places. Make sure the light next to "mode" is *not* illuminated.
+
 The following is a list of functions that can be assigned to buttons:
 
 | Function                    | Assignment Value     |
@@ -196,7 +198,7 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | PILOT_VELZ_MAX    | 50 cm/s              |
 | PILOT_ACCEL_Z     | 50 cm/s/s            |
 | POS_Z_P           | 8.0 (above limit)    |
-| RATE_YAW_FILT_HZ  | 30                   |
+| ATC_RATE_YAW_FILT_HZ  | 30                   |
 | THR_MIN           | 0                    |
 
 Please confirm that the following settings are set this way. These should be set by default but can be different on some platforms.
