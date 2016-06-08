@@ -43,9 +43,11 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 | Telem1 Serial Port      | Companion computer (if using Ethernet) |
 | Power Port              | Power Module                           |
 
-### Tether Interface Wiring
+### Serial Tether Interface Wiring
 
-To be completed.
+This section describes the overall wiring setup when using a tether interface with analog video and serial port communication such as the Blue Robotics Fathom-S Tether Interface.
+
+[To be completed]
 
 ## Install QGroundControl
 
@@ -146,41 +148,37 @@ Note, if using a Logitech gamepad, pressing the "mode" button causes the left jo
 
 The following is a list of functions that can be assigned to buttons:
 
-| Function                    | Assignment Value     |
-|----------------------------:|:---------------------|
-| None                        | 0                    |
-| Shift                       | 1                    |
-| Arm Toggle                  | 2                    |
-| Arm                         | 3                    |
-| Disarm                      | 4                    |
-| Mode Toggle                 | 5                    |
-| Enter Flight Mode 1         | 6                    |
-| Enter Flight Mode 2         | 7                    |
-| Enter Flight Mode 3         | 8                    |
-| Enter Flight Mode 4         | 9                    |
-| Enter Flight Mode 5         | 10                   |
-| Enter Flight Mode 6         | 11                   |
-| Camera Mount Tilt to Center | 21                   |
-| Camera Mount Tilt Up        | 22                   |
-| Camera Mount Tilt Down      | 23                   |
-| Camera Shutter Trigger      | 24                   |
-| Camera Source Toggle        | 25                   |
-| Lights 1 Cycle Brightness   | 31                   |
-| Lights 1 Increase Brightness| 32                   |
-| Lights 1 Decrease Brightness| 33                   |
-| Lights 2 Cycle Brightness   | 34                   |
-| Lights 2 Increase Brightness| 35                   |
-| Lights 2 Decrease Brightness| 36                   |
-| Gain Toggle                 | 41                   |
-| Gain Increase               | 42                   |
-| Gain Decrease               | 43                   |
-| Trim Roll Right             | 44                   |
-| Trim Roll Left              | 45                   |
-| Trim Pitch Up               | 46                   |
-| Trim Pitch Down             | 47                   |
-| Input Hold Toggle           | 48                   |
-
-*These functions are not yet implemented
+* None
+* Shift
+* ArmToggle
+* Arm
+* Disarm
+* ModeToggle
+* EnterFlightMode1
+* EnterFlightMode2
+* EnterFlightMode3
+* EnterFlightMode4
+* EnterFlightMode5
+* EnterFlightMode6
+* CameraMountTilttoCenter
+* CameraMountTiltUp
+* CameraMountTiltDown
+* CameraShutterTrigger
+* CameraSourceToggle
+* Lights1CycleBrightness
+* Lights1IncreaseBrightness
+* Lights1DecreaseBrightness
+* Lights2CycleBrightness
+* Lights2IncreaseBrightness
+* Lights2DecreaseBrightness
+* GainToggle
+* GainIncrease
+* GainDecrease
+* TrimRollRight
+* TrimRollLeft
+* TrimPitchUp
+* TrimPitchDown
+* InputHoldToggle
 
 ## Configuring Parameters
 
