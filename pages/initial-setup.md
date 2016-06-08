@@ -189,28 +189,11 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | ARMING_CHECK      | Disabled             |
 | ATC_ACCEL_Y_MAX   | Disabled             |
 | BRD_SAFETYENABLE  | Disabled             |
-| FS_CRASH_CHECK    | Disabled             |
-| DISARM_DELAY      | 0                    |
-| EK_ALT_NOISE      | 0.1                  |
-| GND_PRIMARY       | 2ndBaro              |
 | PILOT_VELZ_MAX    | 50 cm/s              |
 | PILOT_ACCEL_Z     | 50 cm/s/s            |
 | POS_Z_P           | 8.0 (above limit)    |
-| ATC_RATE_YAW_FILT_HZ  | 30                   |
+| ATC_RATE_YAW_FILT_HZ  | 30               |
 | THR_MIN           | 0                    |
-
-Please confirm that the following settings are set this way. These should be set by default but can be different on some platforms.
-
-| Parameter         | Value                |
-|------------------:|:---------------------|
-| RCMAP_PITCH       | 1                    |
-| RCMAP_ROLL        | 2                    |
-| RCMAP_THROTTLE    | 3                    |
-| RCMAP_YAW         | 4                    |
-| RCMAP_FORWARD*    | 6                    |
-| RCMAP_LATERAL*    | 7                    |
-
-*<small>These are shown in the "default group" panel.
 
 The following are the recommended control system parameters for the BlueROV. These can be changes to make the response faster or slower and make the vehicle more or less stable.
 
