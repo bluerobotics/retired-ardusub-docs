@@ -191,8 +191,7 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | BRD_SAFETYENABLE  | Disabled             |
 | PILOT_VELZ_MAX    | 50 cm/s              |
 | PILOT_ACCEL_Z     | 50 cm/s/s            |
-| POS_Z_P           | 8.0 (above limit)    |
-| ATC_RATE_YAW_FILT_HZ  | 30               |
+| ATC_RAT_YAW_FILT  | 30                   |
 | THR_MIN           | 0                    |
 
 The following are the recommended control system parameters for the BlueROV. These can be changes to make the response faster or slower and make the vehicle more or less stable.
@@ -201,13 +200,8 @@ The following are the recommended control system parameters for the BlueROV. The
 |------------------:|:---------------------|
 | ACCEL_Z_D         | 0.0                  |
 | ACCEL_Z_I         | 3.0                  |
-| ACCEL_Z_IMAX      | 1000.0               |
 | ACCEL_Z_P         | 1.0                  |
-| PILOT_ACCEL_Z     | 50.0                 |
 | POS_Z_P           | 3.0                  |
-| STB_PIT_P         | 12.0                 |
-| STB_RLL_P         | 12.0                 |
-| STB_YAW_P         | 12.0                 |
 | VEL_Z_P           | 8.0                  |
 
 ### Setup Voltage and Current Measurement
