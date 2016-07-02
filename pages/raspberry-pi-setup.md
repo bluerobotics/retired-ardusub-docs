@@ -88,9 +88,9 @@ To be completed
 
 ### Initial Setup
 
-All of this setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like Putty or the Mac Terminal. 
+All of this setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like Putty or the Mac Terminal. The default password is `raspberry`.
 
-	ssh pi@192.168.2.2 -p 'raspberry'
+	ssh pi@192.168.2.2
 
 First, run `rpi-config` to expand filesystem and enable the camera.
 
