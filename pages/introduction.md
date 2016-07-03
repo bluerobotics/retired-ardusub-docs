@@ -80,7 +80,7 @@ If using an Ethernet-based tether option and computer-based autopilot, then stre
 
 ## Supported Frames
 
-ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. Currently supported are:
+ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Currently supported are:
 
 <div class="row">
 	<div class="col-md-4">
