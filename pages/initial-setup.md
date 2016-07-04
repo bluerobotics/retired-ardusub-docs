@@ -4,6 +4,8 @@ title: "Initial Setup"
 permalink: /initial-setup/
 nav:
 - Wiring and Connections: wiring-and-connections
+- - Serial Tether Interface: serial-tether-interface-wiring
+- - Ethernet Tether Interface: ethernet-tether-interface-wiring
 - Install QGroundControl: install-qgroundcontrol
 - Loading Firmware: loading-firmware
 - Connect QGC to Controller: connect-qgc-to-controller
@@ -46,6 +48,10 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 ### Serial Tether Interface Wiring
 
 This section describes the overall wiring setup when using a tether interface with analog video and serial port communication such as the Blue Robotics Fathom-S Tether Interface.
+
+[To be completed]
+
+### Ethernet Tether Interface Wiring
 
 [To be completed]
 
