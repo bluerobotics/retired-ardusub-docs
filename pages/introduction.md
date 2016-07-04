@@ -65,7 +65,9 @@ ArduSub is compatible with both serial and Ethernet based communication interfac
 
 There are several available tether interface boards that work well with ArduSub:
 
-* To be completed.
+* Blue Robotics *Fathom-S Tether Interface* provides analog video and a serial port for direct communication with the autopilot.
+* Blue Robotics *Fathom-X Tether Interface* provides an Ethernet connection and requires a device with Ethernet support. 
+* Direct Ethernet Connection can also be used and also requires a device with Ethernet support.
 
 ### Topside and Ground Control Station
 
