@@ -4,8 +4,6 @@ title: "Initial Setup"
 permalink: /initial-setup/
 nav:
 - Wiring and Connections: wiring-and-connections
-- - Serial Tether Interface: serial-tether-interface-wiring
-- - Ethernet Tether Interface: ethernet-tether-interface-wiring
 - Install QGroundControl: install-qgroundcontrol
 - Loading Firmware: loading-firmware
 - Connect QGC to Controller: connect-qgc-to-controller
