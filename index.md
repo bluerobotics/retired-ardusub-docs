@@ -20,6 +20,12 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 
 ## ArduSub in Use
 
+These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Keep in mind that *ArduSub* can be used on many different ROV designs from unique DIY configurations to professional vehicles.
+
+<iframe width="847" height="476" src="https://www.youtube.com/embed/iK9AmuqVN4I" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="847" height="476" src="https://www.youtube.com/embed/IQBVRbQAQto" frameborder="0" allowfullscreen></iframe>
+
 <div class="row">
 	<div class="col-md-6">
 		<iframe width="400" height="225" src="https://www.youtube.com/embed/BV91zgzEFHs" frameborder="0" allowfullscreen></iframe>
@@ -31,8 +37,8 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 
 ## System Components
 
-- A PixHawk or other DroneCode-compatible autopilot loaded with the latest version of the [ArduSub firmware](#).
-- [QGroundControl software](#) for setup, configuration, and operation of the vehicle.
+- A PixHawk or other DroneCode-compatible autopilot loaded with the latest version of the [ArduSub firmware](/firmware/).
+- [QGroundControl software](http://qgroundcontrol.org) for setup, configuration, and operation of the vehicle.
 - A [suitable ROV or AUV](http://bluerobotics.com) for use with the software
 - Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators
 
