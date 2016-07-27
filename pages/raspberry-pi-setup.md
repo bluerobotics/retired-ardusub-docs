@@ -161,7 +161,13 @@ On Mac or Linux, first find out the disk number of the SD card using `diskutil`.
 
 	diskutil list
 
-Find the SD card in the output. It will be something like `/dev/disk2`.
+Find the SD card in the output. On Mac it will be something like `/dev/disk2` and on Linux it will be something like '/dev/sdb'.
+
+*On Mac:*
+
+	sudo dd bs=4m if=/dev/disk2 | gzip > rasbian-ardusub.img.gz
+
+*On Linux:*
 
 	sudo dd bs=4M if=/dev/sdb | gzip > rasbian-ardusub.img.gz
 
