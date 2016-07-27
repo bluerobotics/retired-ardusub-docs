@@ -25,6 +25,7 @@ page-order: [
     ['/first-dive/'],
     ['/developers/'],
     ['/raspi-setup/'],
+    ['/firmware/'],
     ['/troubleshooting/']
 ]
 
