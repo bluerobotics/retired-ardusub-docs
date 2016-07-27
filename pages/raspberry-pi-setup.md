@@ -3,24 +3,22 @@ layout: default
 title: Raspberry Pi Setup
 permalink: /raspi-setup/
 nav:
-- Simple Setup With Image: simple-setup-with-disk-image
-- - Mac and Linux: mac-and-linux
+- Easy Setup With Image: easy-setup-with-disk-image
 - Setup From Scratch: setup-from-scratch
-- - Install Raspbian & Set IP: install-raspbian-and-set-ip-address
-- - Set Up Internet Sharing: set-up-internet-sharing
-- - Initial Setup: initial-setup
 - Advanced: advanced
-- - Reentering Processes: reentering-mavproxy-and-video-processes
-- - Backing Up SD Image: backing-up-disk-image
 ---
 
 # {{page.title}}
 
 This page explains how to set up a Raspberry Pi for use with ArduSub.
 
-## Simple Setup With Disk Image
+## Easy Setup With Disk Image
 
-With the simple method, you restore a `.img` file to the Raspberry Pi SD Card. This provides the operating system and everything already set up for running ArduSub. You can download the most recent disk image from Blue Robotics [Rasbian-Ardusub Image Repository](#).
+With the simple method, you restore a `.img` file to the Raspberry Pi SD Card. This provides the operating system and everything already set up for running ArduSub. You can download the most recent disk image here:
+
+<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](http://img.ardusub.com/ardusub-raspbian.img.gz) *(Updated 2016-07-27)*
+
+*(Raspbian Jessie Lite 2016-05-27 w/ ArduSub Companion Computer Setup)*
 
 To load the image to your SD card, use the following instructions.
 
@@ -46,13 +44,13 @@ On Linux:
 
 	umount /dev/sddX
 
-To write the disk image to the SD card, use the following command:
+To write the disk image to the SD card, use the following command (on Linux, replace `bs=1m` with `bs=1M`):
 
-	sudo dd bs=1m if=~/Downloads/raspbian-ardusub.img of=/dev/rdiskX
+	sudo dd bs=1m if=~/Downloads/ardusub-raspbian.img of=/dev/rdiskX
 
 If the image is still compressed, you can combine the decompression and writing in one command:
 
-	gunzip --stdout rasbian-ardusub.img.gz | sudo dd bs=1m of=/dev/rdiskX
+	gunzip --stdout ardusub-raspbian.img.gz | sudo dd bs=1m of=/dev/rdiskX
 
 Note that the location and name of `rasbian-ardusub.img` might be slightly different depending on where you downloaded it. Once complete, you can eject the SD card and install it on the Raspberry Pi. That's it!
 
@@ -86,7 +84,7 @@ To be completed
 1. Go to Sharing and click "Internet Sharing". Choose "Wi-Fi" for the source and your Ethernet port or adapter for the destination.
 2. Go to Network Settings and set IP for Ethernet to Manual and the address to 192.168.2.1.
 
-### Initial Setup
+### Command Line Setup
 
 All of this setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like Putty or the Mac Terminal. The default password is `raspberry`.
 

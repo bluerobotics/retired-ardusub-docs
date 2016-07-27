@@ -24,6 +24,7 @@ page-order: [
     ['/initial-setup/'],
     ['/first-dive/'],
     ['/developers/'],
+    ['/raspi-setup/'],
     ['/troubleshooting/']
 ]
 

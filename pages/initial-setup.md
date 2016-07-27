@@ -5,7 +5,8 @@ permalink: /initial-setup/
 nav:
 - Wiring and Connections: wiring-and-connections
 - Install QGroundControl: install-qgroundcontrol
-- Loading Firmware: loading-firmware
+- Loading Firmware: loading-firmware-on-pixhawk
+- Setup Raspberry Pi: set-raspberry-pi
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
 - Configuring Joystick/Gamepad: configuring-joystickgamepad
@@ -40,7 +41,7 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 |------------------------:|:---------------------------------------|
 | I<sup>2</sup>C          | Pressure sensor (MS58XX)               |
 | Telem1 Serial Port      | Tether (if using serial)               |
-| Telem1 Serial Port      | Companion computer (if using Ethernet) |
+| USB Serial Port         | Companion computer (if used)           |
 | Power Port              | Power Module                           |
 
 ### Serial Tether Interface Wiring
@@ -55,9 +56,9 @@ This section describes the overall wiring setup when using a tether interface wi
 
 ## Install QGroundControl
 
-We recommend using the most recent daily build of QGroundControl, which can be [downloaded and installed from here](http://qgroundcontrol.org/downloads). Downloads are available for Android, Windows, Mac OS, and Linux.
+We recommend using the most recent daily build of QGroundControl, which can be [downloaded and installed from here](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html). Downloads are available for Android, Windows, Mac OS, and Linux.
 
-## Loading Firmware
+## Loading Firmware on Pixhawk
 
 Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). Firmware is only available for the following hardware right now:
 
@@ -67,7 +68,7 @@ Please see the [Developer section](/developers/) for instructions on how to comp
 
 ### Loading Through QGroundControl
 
-Install the most recent version of [QGroundControl](#) and navigate to the *Firmware* tab of the settings page.
+Install the most recent daily build of [QGroundControl](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html) and navigate to the *Firmware* tab of the settings page.
 
 <img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
 
@@ -75,11 +76,17 @@ Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl wi
 
 <img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
 
-Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you [download the most recent firmware](firmware.ardusub.com) and choose it here.
+Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you [download the most recent firmware](http://firmware.ardusub.com) and choose it here.
 
 The firmware will upload the Pixhawk and you'll see the following printout and success message.
 
 <img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
+
+## Setup Raspberry Pi
+
+If using the *Advanced Electronics Package*, a Raspberry Pi computer is used as a *companion computer* with the Pixhawk. The computer handles video streaming and relaying communications to the surface through an Ethernet connection.
+
+For information on how to set up the Raspberry Pi for use with ArduSub, see the [Raspberry Pi Setup Page](/raspi-setup/).
 
 ## Connect QGC to Controller
 
