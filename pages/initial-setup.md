@@ -98,36 +98,9 @@ If using a serial port, simply connect the port to the computer and open QGC. Th
 
 ### Ethernet Connection with Companion Computer
 
-If using an Ethernet connection with companion computer, you must must connect to the autopilot via `mavproxy`. This setup will work with a variety of configurations including:
+If an Ethernet connection is used, then a *companion computer* must be used to relay communications between the Pixhawk autopilot and the surface computer. The Pixhawk is connected to the *companion computer* via USB.
 
-- PixHawk Connected to Raspberry Pi via USB or serial
-
-#### Raspberry Pi Initial Setup
-
-We first need to configure the Raspberry Pi to connect directly over Ethernet without a router. This will require setting a static IP address so we can reliably connect to the Raspberry Pi. You can do this by adding the following to the end of the line in `/boot/cmdline.txt`.
-
-```
-ip=169.254.2.2
-```
-
-You should also set up your computer to have a static IP address when connected to the Ethernet connection. We recommend using the address 169.254.2.1.
-
-Next you'll need to get the companion computer scripts. Make sure you have an internet connection to the Raspberry Pi and enter the following:
-
-```
-sudo apt-get update
-
-sudo apt-get install gstreamer1.0
-
-git clone https://github.com/bluerobotics/companion.git
-```
-
-Next, we'll set up the companion computer scripts to run automatically at boot. Enter the following commands to do so:
-
-```
-cd companion/RPI2/Raspbian
-sudo ./rov-setup.sh
-```
+Please see the [Raspberry Pi Setup](/raspi-setup/) page for more details on setting up the *companion computer*.
 
 ### Ethernet Connection with Linux Autopilot (Navio, BBBmini, etc.)
 
