@@ -172,15 +172,17 @@ The following is a list of functions that can be assigned to buttons:
 
 ## Setup Voltage and Current Measurement
 
-On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*.
+On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*. The battery capacity depends on the battery that you are using on your ROV and should be entered in *mAh*.
 
 <img src="/images/qgc/power-setup-1.png" class="img-responsive img-center" />
 
 ## Flight Mode Setup
 
-Currently only the *Stabilize* and *AltHold* modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 2", which should be set to *AltHold*. As new flight modes are added to ArduSub, these can be configured to activate those modes.
+There are several flight modes available: *Manual*, *Stabilize*, and *DepthHold*. On the *Flight Modes* tab, set the first flight mode (the default) to *Manual* and set the second and third to *Stabilize* and *DepthHold*. The remaining flight modes can be left on *Stabilize* or any other setting.
 
 <img src="/images/qgc/flight-mode-setup-1.png" class="img-responsive img-center" />
+
+Remember, when you set up the joystick above, you added buttons to change flight modes. These flight modes can be entered by pressing one of those buttons or by selecting the desired mode from the toolbar in QGroundControl.
 
 ## Camera Tilt Setup (if used)
 
