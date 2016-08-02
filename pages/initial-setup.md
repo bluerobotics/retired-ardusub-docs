@@ -9,8 +9,12 @@ nav:
 - Setup Raspberry Pi: set-raspberry-pi
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
-- Configuring Joystick/Gamepad: configuring-joystickgamepad
-- Configuring Parameters: configuring-parameters
+- Setup Joystick/Gamepad: setup-joystickgamepad
+- Setup Voltage/Current Measurement: setup-voltage-and-current-measurement
+- Flight Mode Setup: flight-mode-setup
+- Camera Tilt Setup: camera-tilt-setup-if-used
+- Lights Setup: lights-setup
+- Other Parameters: other-parameters
 - Configuring Motor Directions: configuring-motor-directions
 ---
 
@@ -118,7 +122,7 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 4. Click on *Compass* and follow the instructions.
 5. When completed, the *Sensors* tab will no longer be red.
 
-## Configuring Joystick/Gamepad
+## Setup Joystick/Gamepad
 
 *ArduSub* provides a number of parameters to map controller buttons to various functions. This setup is required as there are no defaults configured.
 
@@ -166,7 +170,37 @@ The following is a list of functions that can be assigned to buttons:
 * TrimPitchDown
 * InputHoldToggle
 
-## Configuring Parameters
+## Setup Voltage and Current Measurement
+
+On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*.
+
+<img src="/images/qgc/power-setup-1.png" class="img-responsive img-center" />
+
+## Flight Mode Setup
+
+Currently only the *Stabilize* and *AltHold* modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 2", which should be set to *AltHold*. As new flight modes are added to ArduSub, these can be configured to activate those modes.
+
+<img src="/images/qgc/flight-mode-setup-1.png" class="img-responsive img-center" />
+
+## Camera Tilt Setup (if used)
+
+Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Select *Servo* for the "Type" under "Gimbal Settings" on the right.
+
+<img src="/images/qgc/camera-tilt-setup-1.png" class="img-responsive img-center" />
+
+Is desired, you can check the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle. We generally leave this unchecked.
+
+## Lights Setup
+
+The lights feature is currently setup to support lights that use a standard servo PWM signal for control. This is done by connecting the *RCIN9* input, which contains the light control signal, to the appropriate output. To do this, please find the parameter `RCx_FUNCTION`, where `x` is the output channel that corresponds to the lights, and set it to `RCIN9`.
+
+For example, if the lights are connected to output channel 7, then set `RC7_FUNCTION` to `RCIN9` as shown below.
+
+<img src="/images/qgc/lights-setup-1.png" class="img-responsive img-center" />
+
+Note, this setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics *Lumen* Lights.
+
+## Other Parameters
 
 A number of parameters should be adjusted at startup for use with ArduSub. The following table shows the currently recommended parameters to change.
 
@@ -189,34 +223,6 @@ The following are the recommended control system parameters for the BlueROV. The
 | ACCEL_Z_P         | 1.0                  |
 | POS_Z_P           | 3.0                  |
 | VEL_Z_P           | 8.0                  |
-
-### Setup Voltage and Current Measurement
-
-On the *Power* tab choose the appropriate setup. If using the standard 3DR Power Module, choose *Analog Voltage and Current*, the appropriate battery capacity, and the *Power Module 90A*.
-
-<img src="/images/qgc/power-setup-1.png" class="img-responsive img-center" />
-
-### Flight Mode Setup
-
-Currently only the *Stabilize* and *AltHold* modes are used. On the *Flight Modes* tab, set all flight modes to *Stabilize* except for "Flight Mode 2", which should be set to *AltHold*. As new flight modes are added to ArduSub, these can be configured to activate those modes.
-
-<img src="/images/qgc/flight-mode-setup-1.png" class="img-responsive img-center" />
-
-### Camera Tilt Setup (if used)
-
-Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Select *Servo* for the "Type" under "Gimbal Settings" on the right.
-
-<img src="/images/qgc/camera-tilt-setup-1.png" class="img-responsive img-center" />
-
-Is desired, you can check the *Stabilize* box, which will enable auto-stabilization of the camera based on the vehicle pitch angle. We generally leave this unchecked.
-
-### Lights Setup
-
-The lights feature is currently setup to support lights that use a standard servo PWM signal for control. Until light support is officially added to QGC, the "Gimbal Roll" settings are used to connect the light input to a servo output.
-
-Select an available channel for the "Output channel" and *RC9* for the "Input channel". Make sure that "Servo reverse" and "Stabilize" and *not* checked. Set the "Servo PWM limits" to 1100 to 1900.
-
-<img src="/images/qgc/lights-setup-1.png" class="img-responsive img-center" />
 
 ## Configuring Motor Directions
 
