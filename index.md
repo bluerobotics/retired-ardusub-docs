@@ -35,6 +35,15 @@ These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Kee
 	</div>
 </div>
 
+<div class="row">
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/hNuHMLZZWbw" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="col-md-6">
+		<!--<iframe width="400" height="225" src="https://www.youtube.com/embed/qVMpD-v-dfY" frameborder="0" allowfullscreen></iframe>-->
+	</div>
+</div>
+
 ## System Components
 
 - A PixHawk or other DroneCode-compatible autopilot loaded with the latest version of the [ArduSub firmware](/firmware/).
