@@ -23,6 +23,8 @@ As part of the [DroneCode Software Platform](https://www.dronecode.org/dronecode
 
 ArduSub is on the cutting edge of marine robotics and intended for those people who want to try advanced technology, cutting edge software, and new capabilities. It can be used on many different types of subsea vehicles including several configurations of ROVs.
 
+<img src="/images/ardusub-overview-diagram.png" class="img-responsive" />
+
 ## Key Features
 
 - **Feedback control and stability:** Based on a multicopter autopilot system, the ArduSub controller has accurate feedback control to actively maintain orientation.
