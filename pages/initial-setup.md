@@ -111,7 +111,9 @@ For Linux based autopilots, the network connection is launched when the ArduSub 
 Once the controller is connected to QGC for the first time, we must calibrate the accelerometers, compass, and joystick.
 
 1. Go to the settings tab in QGC and select the red *Sensors* tab on the left sidebar.
-2. Choose your autopilot orientation (none for the BlueROV).
+2. Choose your autopilot orientation:
+	- `None` for level orientation (such as the BlueROV1)
+	- `Roll90` for the BlueROV2
 3. Click on *Accelerometers* and follow the instructions.
 4. Click on *Compass* and follow the instructions.
 5. When completed, the *Sensors* tab will no longer be red.
