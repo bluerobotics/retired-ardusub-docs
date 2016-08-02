@@ -22,9 +22,14 @@ The *ArduSub* project is a fully-featured, open-source controller for remotely o
 
 These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Keep in mind that *ArduSub* can be used on many different ROV designs from unique DIY configurations to professional vehicles.
 
-<iframe width="847" height="476" src="https://www.youtube.com/embed/iK9AmuqVN4I" frameborder="0" allowfullscreen></iframe>
-
-<iframe width="847" height="476" src="https://www.youtube.com/embed/IQBVRbQAQto" frameborder="0" allowfullscreen></iframe>
+<div class="row">
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/iK9AmuqVN4I" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/IQBVRbQAQto" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
 
 <div class="row">
 	<div class="col-md-6">
