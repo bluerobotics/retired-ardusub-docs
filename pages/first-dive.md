@@ -8,7 +8,6 @@ nav:
 - Arming and Disarming: arming-and-disarming
 - Tuning: tuning
 - Pre-Dive Checklist: pre-dive-checklist
-- Launching Video Stream: launching-video-stream
 - Recording Video: recording-video
 ---
 
@@ -24,9 +23,11 @@ The gamepad controls the ROV during operation. It has been tested with the Micro
 
 ## Dive Modes
 
-**Stabilize Mode** is the default mode of operation. The vehicle automatically stabilizes to level roll and pitch angle and maintains heading when not commanded to turn. The vertical control is left entirely to the pilot.
+**Manual Mode** is normally set to Mode 1 (default mode). In this mode, the vehicle only output motor controls based on the pilot input from the joysticks. There is no feedback stabilization, heading holding, or depth holding.
 
-**AltHold Mode** is the same as stabilize mode with the addition of automatic depth holding. The throttle control is used to increase or decrease the holding depth.
+**Stabilize Mode** automatically stabilizes to level roll and pitch angle and maintains heading when not commanded to turn. The vertical control is left entirely to the pilot.
+
+**DepthHold Mode** is the same as stabilize mode with the addition of automatic depth holding. The throttle control is used to increase or decrease the holding depth.
 
 ## Arming and Disarming
 
@@ -41,20 +42,6 @@ There are a number of control system tuning parameters that can be adjusted to c
 ## Pre-Dive Checklist
 
 To be completed.
-
-## Launching Video Stream
-
-The following command shows how to start a video stream from the Raspberry Pi that can be automatically displayed in the QGroundControl display.
-
-```
-raspivid -n -fl -w 1280 -h 720 -b 10000000 -fps 30 -t 0 -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote ip> port=5600
-```
-
-The following will stream video at 30 fps and 1080p resolution, typically with latency of around 300ms.
-
-```
-raspivid -n -md 2 -b 25000000 -fps 30 -t 0 -awb off -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=10 pt=96 ! udpsink host=<remote ip> port=5600 
-```
 
 ## Recording Video
 

@@ -48,16 +48,6 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 | USB Serial Port         | Companion computer (if used)           |
 | Power Port              | Power Module                           |
 
-### Serial Tether Interface Wiring
-
-This section describes the overall wiring setup when using a tether interface with analog video and serial port communication such as the Blue Robotics Fathom-S Tether Interface.
-
-[To be completed]
-
-### Ethernet Tether Interface Wiring
-
-[To be completed]
-
 ## Install QGroundControl
 
 We recommend using the most recent daily build of QGroundControl, which can be [downloaded and installed from here](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html). Downloads are available for Android, Windows, Mac OS, and Linux.
