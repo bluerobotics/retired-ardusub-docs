@@ -50,9 +50,13 @@ To upload the code to a PixHawk or similar controller, add `-upload` to the buil
 
 	make px4-v2-vectored-upload
 
+This only works with a direct USB connection to the Pixhawk. If you're using a companion computer and an Ethernet tether connection, you can upload the code through the companion computer. Please see the [Flashing Pixhawk Through SSH](/raspi-setup/#flashing-pixhawk-through-ssh) for instructions on how to do that.
+
 ## Running
 
 The code begins running immediately once uploaded. For Linux-based autopilots, it must be launched or started with launch script. Please see the documentation for your respective autopilot.
+
+The companion computer is also set up to start automatically and connect to the autopilot. Please see the [companion computer page](/raspi-setup/) for more setup details.
 
 ## Making a Custom Configuration
 
