@@ -229,10 +229,11 @@ The following are the recommended control system parameters for the BlueROV. The
 
 Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_1_DIRECTION` for motors 1-8 and valid values are `1` (normal) or `-1` (reverse).
 
-We generally follow this process to check motor rotation directions:
+Make sure you complete all above steps before completing this step. We generally follow this process to check motor rotation directions:
 
-1. Arm vehicle after completing all of the setup steps above
-2. Move the "forward" joystick forward and verify that the thrusters that produce some forward thrust are operating in the correct direction
-3. Move the "vertical" joystick upwards and verify that the thrusters that produce some vertical thrust are operating int the correct direction
+1. Set the flight mode to "Manual"
+2. Arm vehicle
+3. Move the "forward" joystick forward and verify that the thrusters that produce some forward thrust are operating in the correct direction and blowing out the back of the vehicle
+4. Move the "vertical" joystick upwards and verify that the thrusters that produce some vertical thrust are operating in the correct direction and blowing air downwards
 
 Provided that the correct frame configuration was chosen during compilation, you should not need to perform any more validation than that.
