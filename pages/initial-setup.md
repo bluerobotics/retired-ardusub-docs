@@ -142,43 +142,11 @@ We recommend the button assignments shown in the image below:
 
 Each button can be assigned to one primary function and one alternate "shift" function. If the "shift" functions are used, then a "shift" button must be assigned. This works like the shift key on your keyboard, altering the functionality of other buttons while pressed.
 
-In the parameters, you will find a number of parameters named `BTN1_FUNCTION` (normal function) and `BTN1_SFUNCTION` (shift function) for each button. You can find the button numbers on the "joystick" tab in QGroundControl.
+You can assign the buttons to various functions on the *Joystick* settings tab. Pressing each button will light up the button number and then the desired function can be chosen. See the image below for an example set (on a Mac). Note that the button numbering is different between controllers and operating systems so this won't necessarily be the same as your setup.
 
-Note, if using a Logitech gamepad, pressing the "mode" button causes the left joystick and the button pad to switch places. Make sure the light next to "mode" is *not* illuminated.
+<img src="/images/qgc/button-setup-1.png" class="img-responsive img-center" />
 
-The following is a list of functions that can be assigned to buttons:
-
-* None
-* Shift
-* ArmToggle
-* Arm
-* Disarm
-* ModeToggle
-* EnterFlightMode1
-* EnterFlightMode2
-* EnterFlightMode3
-* EnterFlightMode4
-* EnterFlightMode5
-* EnterFlightMode6
-* CameraMountTilttoCenter
-* CameraMountTiltUp
-* CameraMountTiltDown
-* CameraShutterTrigger
-* CameraSourceToggle
-* Lights1CycleBrightness
-* Lights1IncreaseBrightness
-* Lights1DecreaseBrightness
-* Lights2CycleBrightness
-* Lights2IncreaseBrightness
-* Lights2DecreaseBrightness
-* GainToggle
-* GainIncrease
-* GainDecrease
-* TrimRollRight
-* TrimRollLeft
-* TrimPitchUp
-* TrimPitchDown
-* InputHoldToggle
+Note, if using a Logitech gamepad, pressing the "mode" button causes the left joystick and the button pad to switch places. Make sure the light next to "mode" is *not* illuminated. Also note that to use an Xbox controller or Logitech gamepad in "X-input" mode, you must install an X-input driver. We recommend [360Controller](https://github.com/360Controller/360Controller/releases).
 
 ## Setup Voltage and Current Measurement
 
