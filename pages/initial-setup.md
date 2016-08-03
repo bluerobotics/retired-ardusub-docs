@@ -50,7 +50,7 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 
 ## Install QGroundControl
 
-We recommend using the most recent daily build of QGroundControl, which can be [downloaded and installed from here](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html). Downloads are available for Android, Windows, Mac OS, and Linux.
+We recommend using the most recent daily build of QGroundControl. Downloads are available for Android, Windows, Mac OS, and Linux.
 
 Here are direct links to the most recent daily builds:
 
@@ -72,7 +72,7 @@ Please see the [Developer section](/developers/) for instructions on how to comp
 
 ### Loading Through QGroundControl
 
-Install the most recent daily build of [QGroundControl](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html) and navigate to the *Firmware* tab of the settings page.
+Install the most recent daily build of [QGroundControl](#install-qgroundcontrol) and navigate to the *Firmware* tab of the settings page.
 
 <img src="/images/qgc/firmware-1.png" class="img-responsive img-center" />
 
