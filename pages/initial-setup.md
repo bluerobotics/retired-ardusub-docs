@@ -6,7 +6,7 @@ nav:
 - Wiring and Connections: wiring-and-connections
 - Install QGroundControl: install-qgroundcontrol
 - Loading Firmware: loading-firmware-on-pixhawk
-- Setup Raspberry Pi: set-raspberry-pi
+- Setup Raspberry Pi: setup-raspberry-pi
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
 - Setup Joystick/Gamepad: setup-joystickgamepad
