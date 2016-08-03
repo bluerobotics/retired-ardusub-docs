@@ -193,7 +193,7 @@ First make sure your companion computer has the most recent scripts. Execute thi
 
 Next, run the firmware updater script:
  
- ssh pi@192.168.2.2 "/home/pi/companion/RPI2/Raspbian/flash_px4.py --frame=vectored"
+	ssh pi@192.168.2.2 "/home/pi/companion/RPI2/Raspbian/flash_px4.py --frame=vectored"
 
 While the flashing command is running, you will see the script try to start the Pixhawk's bootloader multiple times. The output will look like this:
 
