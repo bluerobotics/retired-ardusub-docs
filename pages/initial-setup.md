@@ -62,6 +62,16 @@ This section describes the overall wiring setup when using a tether interface wi
 
 We recommend using the most recent daily build of QGroundControl, which can be [downloaded and installed from here](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html). Downloads are available for Android, Windows, Mac OS, and Linux.
 
+Here are direct links to the most recent daily builds:
+
+- [Windows](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl-installer.exe)
+- [Mac OSX](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.dmg)
+- Linux
+	- [AppImage](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.AppImage)
+	- [Compressed Archive](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.tar.bz2)
+
+Please see the [QGroundControl download page](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html) for information on Android and iOS daily builds.
+
 ## Loading Firmware on Pixhawk
 
 Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). Firmware is only available for the following hardware right now:
