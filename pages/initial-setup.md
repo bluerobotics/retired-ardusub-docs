@@ -9,6 +9,7 @@ nav:
 - Setup Raspberry Pi: setup-raspberry-pi
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
+- Important Parameters: important-parameters-to-set
 - Setup Joystick/Gamepad: setup-joystickgamepad
 - Setup Voltage/Current Measurement: setup-voltage-and-current-measurement
 - Flight Mode Setup: flight-mode-setup
@@ -122,6 +123,20 @@ Once the controller is connected to QGC for the first time, we must calibrate th
 4. Click on *Compass* and follow the instructions.
 5. When completed, the *Sensors* tab will no longer be red.
 
+## Important Parameters to Set
+
+There are a few parameters that must be set before the Pixhawk will output to the thrusters, lights, and servos. We'll also disable the failsafes. These will be enabled in the future but are currently not suited for *ArduSub*.
+
+Find the Parameters tab on the settings page and change the following settings:
+
+| Parameter         | Value to Set         |
+|------------------:|:---------------------|
+| ARMING_CHECK      | Disabled             |
+| BRD_SAFETYENABLE  | Disabled             |
+
+
+You **have to power cycle the system** after setting these parameters to get them to work.
+
 ## Setup Joystick/Gamepad
 
 *ArduSub* provides a number of parameters to map controller buttons to various functions. This setup is required as there are no defaults configured.
@@ -176,9 +191,7 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 
 | Parameter         | Value                |
 |------------------:|:---------------------|
-| ARMING_CHECK      | Disabled             |
 | ATC_ACCEL_Y_MAX   | Disabled             |
-| BRD_SAFETYENABLE  | Disabled             |
 | PILOT_VELZ_MAX    | 50 cm/s              |
 | PILOT_ACCEL_Z     | 50 cm/s/s            |
 | ATC_RAT_YAW_FILT  | 30                   |
