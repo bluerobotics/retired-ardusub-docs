@@ -10,7 +10,8 @@ nav:
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
 - Important Parameters: important-parameters-to-set
-- Setup Joystick/Gamepad: setup-joystickgamepad
+- Joystick/Gamepad Calibration: joystickgamepad-calibration
+- Button Setup: button-setup
 - Setup Voltage/Current Measurement: setup-voltage-and-current-measurement
 - Flight Mode Setup: flight-mode-setup
 - Camera Tilt Setup: camera-tilt-setup-if-used
@@ -141,7 +142,20 @@ Find the Parameters tab on the settings page and change the following settings:
 
 You **have to power cycle the system** after setting these parameters to get them to work.
 
-## Setup Joystick/Gamepad
+## Joystick/Gamepad Calibration
+
+The first time you use a new joystick or gamepad in QGroundControl, you will be asked to calibrate it. This allows QGC to detect which axis is which and what the range of each axis is.
+
+**Important *ArduSub*-specific Instructions:** The calibration process is a little confusing for *ArduSub*. This will be fixed in upcoming versions of QGC, but for now, you must follow this process.
+
+1. Click "Calibrate" on the joystick page, then click "Next".
+2. **We want to calibrate the joysticks in the opposite way that QGC asks us to do it**. When asked to move each axis, move the following sticks:
+- Throttle: right stick up/down
+- Yaw: right stick right/left
+- Roll: left stick right/left
+- Pitch: left stick up/down
+
+## Button Setup
 
 *ArduSub* provides a number of parameters to map controller buttons to various functions. This setup is required as there are no defaults configured.
 
