@@ -71,6 +71,10 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 Please see the [Developer section](/developers/) for instructions on how to compile from source.
 
+### Loading Through Raspberry Pi
+
+If you're using the Raspberry Pi companion computer and an Ethernet tether, it's usually most convenient to flash the *ArduSub* firmware to the Pixhawk through the Raspberry Pi. Please note that the [Raspberry Pi must be already set up](#setup-raspberry-pi) and then you can follow the [instructions to flash through Raspberry Pi](/raspi-setup/#flashing-pixhawk-through-ssh).
+
 ### Loading Through QGroundControl
 
 Install the most recent daily build of [QGroundControl](#install-qgroundcontrol) and navigate to the *Firmware* tab of the settings page.
