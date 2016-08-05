@@ -196,16 +196,6 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 | PILOT_ACCEL_Z     | 50 cm/s/s            |
 | ATC_RAT_YAW_FILT  | 30                   |
 
-The following are the recommended control system parameters for the BlueROV. These can be changes to make the response faster or slower and make the vehicle more or less stable.
-
-| Parameter         | Value                |
-|------------------:|:---------------------|
-| ACCEL_Z_D         | 0.0                  |
-| ACCEL_Z_I         | 3.0                  |
-| ACCEL_Z_P         | 1.0                  |
-| POS_Z_P           | 3.0                  |
-| VEL_Z_P           | 8.0                  |
-
 ## Configuring Motor Directions
 
 Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_1_DIRECTION` for motors 1-8 and valid values are `1` (normal) or `-1` (reverse).
