@@ -5,8 +5,8 @@ permalink: /initial-setup/
 nav:
 - Wiring and Connections: wiring-and-connections
 - Install QGroundControl: install-qgroundcontrol
-- Loading Firmware: loading-firmware-on-pixhawk
 - Setup Raspberry Pi: setup-raspberry-pi
+- Loading Firmware: loading-firmware-on-pixhawk
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
 - Important Parameters: important-parameters-to-set
@@ -63,6 +63,12 @@ Here are direct links to the most recent daily builds:
 
 Please see the [QGroundControl download page](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html) for information on Android and iOS daily builds.
 
+## Setup Raspberry Pi
+
+If using the *Advanced Electronics Package*, a Raspberry Pi computer is used as a *companion computer* with the Pixhawk. The computer handles video streaming and relaying communications to the surface through an Ethernet connection.
+
+For information on how to set up the Raspberry Pi for use with ArduSub, see the [Raspberry Pi Setup Page](/raspi-setup/).
+
 ## Loading Firmware on Pixhawk
 
 Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). Firmware is only available for the following hardware right now:
@@ -90,12 +96,6 @@ Press "OK" at the top right and you will be prompted to select the firmware file
 The firmware will upload the Pixhawk and you'll see the following printout and success message.
 
 <img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
-
-## Setup Raspberry Pi
-
-If using the *Advanced Electronics Package*, a Raspberry Pi computer is used as a *companion computer* with the Pixhawk. The computer handles video streaming and relaying communications to the surface through an Ethernet connection.
-
-For information on how to set up the Raspberry Pi for use with ArduSub, see the [Raspberry Pi Setup Page](/raspi-setup/).
 
 ## Connect QGC to Controller
 
