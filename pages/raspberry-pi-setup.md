@@ -71,18 +71,7 @@ Start with Jessie-Lite image downloaded from [raspberrypi.org](https://www.raspb
 
 ### Set Up Internet Sharing
 
-#### Windows
-
-To be completed
-
-#### Linux
-
-To be completed
-
-#### Mac
-
-1. Go to Sharing and click "Internet Sharing". Choose "Wi-Fi" for the source and your Ethernet port or adapter for the destination.
-2. Go to Network Settings and set IP for Ethernet to Manual and the address to 192.168.2.1.
+Please see the main [host computer setup](/initial-setup/#host-computer-setup) sections for details.
 
 ### Command Line Setup
 

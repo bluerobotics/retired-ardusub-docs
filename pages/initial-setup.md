@@ -7,6 +7,7 @@ nav:
 - Install QGroundControl: install-qgroundcontrol
 - Setup Raspberry Pi: setup-raspberry-pi
 - Loading Firmware: loading-firmware-on-pixhawk
+- Host Computer Setup: host-computer-setup
 - Connect QGC to Controller: connect-qgc-to-controller
 - Calibration: calibration
 - Important Parameters: important-parameters-to-set
@@ -97,6 +98,33 @@ Press "OK" at the top right and you will be prompted to select the firmware file
 The firmware will upload the Pixhawk and you'll see the following printout and success message.
 
 <img src="/images/qgc/firmware-3.png" class="img-responsive img-center" />
+
+## Host Computer Setup
+
+Just a few small setup items are required on the host computer. Please see the details here depending on which tether interface is being used.
+
+### Install FTDI Drivers (Serial/Fathom-S Tether Interface Only)
+
+Mac and Linux computers usually have the FTDI drivers installed already. For Windows computers, the driver will probably have to be installed. [Sparkfun has a great tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ftdi-drivers/all) on installing the drivers properly.
+
+Once installed, the Fathom-S Tether Interface will appear as a serial port on the computer.
+
+### Set Up Internet Sharing (Ethernet/Fathom-X Tether Interface Only)
+
+In an Ethernet-based setup, the Raspberry Pi defaults to the IP address of 192.168.2.2. The **host computer must be set up with an IP address of 192.168.2.1** in order to receive communications and video. See instructions below:
+
+#### Windows
+
+To be completed
+
+#### Linux
+
+To be completed
+
+#### Mac
+
+1. Go to Sharing and click "Internet Sharing". Choose "Wi-Fi" for the source and your Ethernet port or adapter for the destination.
+2. Go to Network Settings and set IP for Ethernet to Manual and the address to 192.168.2.1.
 
 ## Connect QGC to Controller
 
