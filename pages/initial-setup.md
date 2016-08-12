@@ -9,7 +9,7 @@ nav:
 - Loading Firmware: loading-firmware-on-pixhawk
 - Host Computer Setup: host-computer-setup
 - Connect QGC to Controller: connect-qgc-to-controller
-- Calibration: calibration
+- Sensor Calibration: sensor-calibration
 - Important Parameters: important-parameters-to-set
 - Joystick/Gamepad Calibration: joystickgamepad-calibration
 - Button Setup: button-setup
@@ -144,7 +144,7 @@ Please see the [Raspberry Pi Setup](/raspi-setup/) page for more details on sett
 
 For Linux based autopilots, the network connection is launched when the ArduSub code is started. For examples, please see the documentation for your respective autopilot.
 
-## Calibration
+## Sensor Calibration
 
 Once the controller is connected to QGC for the first time, we must calibrate the accelerometers, compass, and joystick.
 
