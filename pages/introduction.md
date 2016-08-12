@@ -93,7 +93,7 @@ ArduSub includes a high-level motor library that can configure motors in any con
 	</div>
 	<div class="col-md-4">
 		<img src="/images/vectored-frame.png" class="img-responsive img-center" style="max-height:250px;">
-		<p class="text-center"><strong>Vectored ROV</strong> with side-by-side vertical thrusters. Use for the <a href="http://bluerov2.com"><em>BlueROV2</em></a>. (Frame: <code>vectored</code>)</p>
+		<p class="text-center"><strong>Vectored ROV</strong> with side-by-side vertical thrusters. Used for the <a href="http://bluerov2.com"><em>BlueROV2</em></a>. (Frame: <code>vectored</code>)</p>
 	</div>
 	<div class="col-md-4">
 		<img src="/images/vectored6dof-frame.png" class="img-responsive img-center" style="max-height:250px;">
