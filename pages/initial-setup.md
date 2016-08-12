@@ -123,8 +123,8 @@ To be completed
 
 #### Mac
 
-1. Go to Sharing and click "Internet Sharing". Choose "Wi-Fi" for the source and your Ethernet port or adapter for the destination.
-2. Go to Network Settings and set IP for Ethernet to Manual and the address to 192.168.2.1.
+1. Go to Network Settings and set IP for Ethernet to Manual and the address to 192.168.2.1.
+2. Go to Sharing and click "Internet Sharing". Choose "Wi-Fi" for the source and your Ethernet port or adapter for the destination.
 
 ## Connect QGC to Controller
 
