@@ -154,11 +154,11 @@ Find the SD card in the output. On Mac it will be something like `/dev/disk2` an
 
 *On Mac:*
 
-	sudo dd bs=4m if=/dev/disk2 | gzip > rasbian-ardusub.img.gz
+	sudo dd bs=4m if=/dev/disk2 | gzip > raspbian-ardusub.img.gz
 
 *On Linux:*
 
-	sudo dd bs=4M if=/dev/sdb | gzip > rasbian-ardusub.img.gz
+	sudo dd bs=4M if=/dev/sdb | gzip > raspbian-ardusub.img.gz
 
 Press Ctrl-T to check on status while this is happening. It can take quite a while. 
 
