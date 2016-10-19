@@ -248,7 +248,7 @@ A number of parameters should be adjusted at startup for use with ArduSub. The f
 
 ## Configuring Motor Directions
 
-Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_1_DIRECTION` for motors 1-8 and valid values are `1` (normal) or `-1` (reverse).
+Due to clockwise and counterclockwise propellers, as well as wiring, the motor directions will have to be tested and corrected during initial setup. *ArduSub* includes a set of parameters for this purpose. The parameters are called `MOT_1_DIRECTION` for motors 1-8 and valid values are *normal* or *reverse*.
 
 Make sure you complete all above steps before completing this step. We generally follow this process to check motor rotation directions:
 
