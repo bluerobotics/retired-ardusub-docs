@@ -24,6 +24,6 @@ A fully set up image for the Raspberry Pi is available here. This image is used 
 
 # Parameter Files
 
-These files have the recommended parameters for ArduSub, making it easy to setup and update parameters on your vehicle. Note that these do not include joystick setup parameters because the button mapping is different depending on the operating system used.
+These files have the recommended parameters for ArduSub, making it easy to setup and update parameters on your vehicle. These parameters will not adjust your accelerometer calibration, compass calibration, or motor directions, but will change joystick button setup, PID controller values, and all other parameters.
 
-<i class="fa fa-download" aria-hidden="true"></i> [Coming Soon]()
+<i class="fa fa-download" aria-hidden="true"></i> [Standard ArduSub Parameters](http://firmware.ardusub.com/parameters/latest/bluerov2.params)
