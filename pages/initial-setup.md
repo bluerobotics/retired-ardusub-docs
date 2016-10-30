@@ -23,7 +23,7 @@ nav:
 
 # {{page.title}}
 
-First-time setup of the autopilot includes downloading and installing the QGroundControl GCS, mounting the controller to the vehicle, connecting it to the tether, power, and motors, and then performing initial configuration and calibration.
+First-time setup of the autopilot includes downloading and installing the QGroundControl, mounting the controller to the vehicle, connecting it to the tether, power, and motors, and then performing initial configuration and calibration.
 
 ## Wiring and Connections
 
