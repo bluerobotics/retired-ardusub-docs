@@ -3,7 +3,7 @@ layout: default
 title: "First Dive"
 permalink: /first-dive/
 nav:
-- Joystick/Controller Functions: joystick-controller-functions
+- Joystick/Controller Functions: joystickcontroller-functions
 - Dive Modes: dive-modes
 - Arming and Disarming: arming-and-disarming
 - Tuning: tuning
@@ -17,7 +17,7 @@ This section covers the information you will need to know for your first dive an
 
 ## Joystick/Controller Functions
 
-The gamepad controls the ROV during operation. It has been tested with the Microsoft Xbox controller and the Logitech F310. The function of the buttons [depends on those mapped by the user](/initial-setup/#configuring-joystickgamepad) but is usually configured to the following:
+The gamepad controls the ROV during operation. It has been tested with the Microsoft Xbox controller and the Logitech F310. The function of the buttons [depends on those mapped by the user](/initial-setup/#joystickgamepad-calibration) but is usually configured to the following:
 
 <img src="/images/controller.png" class="img-responsive" />
 
