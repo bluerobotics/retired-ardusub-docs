@@ -48,9 +48,7 @@ DataFlash logs can be retrieved in two ways:
 
 	- Log downloading via QGroundControl
 
-		Click the 'Widgets' icon in the top menu bar, and click the 'Log Download' option.
-
-		<img src="/images/log-download.png" class="img-responsive img-center" style="max-height:400px;">
+		Click the Analyze icon at the top of the window. The icon looks like a magnifying glass over a document.
 
 		Click the 'Refresh' button to view available logs.
 
@@ -58,7 +56,7 @@ DataFlash logs can be retrieved in two ways:
 
 		Multiple logs can be downloaded by highlighting the desired logs before clicking 'Download'.
 
-		<img src="/images/log-download-1.png" class="img-responsive img-center" style="max-height:400px;">
+		<img src="/images/log-download.png" class="img-responsive img-center" style="max-height:400px;">
 
 	- Log downloading via MAVProxy
 
