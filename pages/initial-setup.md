@@ -17,7 +17,6 @@ nav:
 - Flight Mode Setup: flight-mode-setup
 - Camera Tilt Setup: camera-tilt-setup-if-used
 - Lights Setup: lights-setup
-- Other Parameters: other-parameters
 - Configuring Motor Directions: configuring-motor-directions
 ---
 
@@ -234,17 +233,6 @@ For example, if the lights are connected to output channel 7, then set `RC7_FUNC
 <img src="/images/qgc/lights-setup-1.png" class="img-responsive img-center" />
 
 Note, this setup only works with lights that are controllable with a servo PWM pulse, such as the Blue Robotics *Lumen* Lights.
-
-## Other Parameters
-
-A number of parameters should be adjusted at startup for use with ArduSub. The following table shows the currently recommended parameters to change.
-
-| Parameter         | Value                |
-|------------------:|:---------------------|
-| ATC_ACCEL_Y_MAX   | Disabled             |
-| PILOT_VELZ_MAX    | 50 cm/s              |
-| PILOT_ACCEL_Z     | 50 cm/s/s            |
-| ATC_RAT_YAW_FILT  | 30                   |
 
 ## Configuring Motor Directions
 
