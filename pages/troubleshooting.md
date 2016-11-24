@@ -34,7 +34,7 @@ Once connected to the autopilot, MAVProxy will save all telemetry to a file call
 <br><br>
 **DataFlash logs**
 
-DataFlash logs are saved by the Autopilot directly to onboard memory (SD card in the case of the Pixhawk), regardless of a telemetry connection. These logs are saved in a **.bin** file. DataFlash logs are capable of logging data at a much faster rate than telemetry logs, but the file needs to be converted using MissionPlanner before it can be viewed by QGroundControl, MissionPlanner, or APMPlanner.
+DataFlash logs are saved by the Autopilot directly to onboard memory (SD card in the case of the Pixhawk), regardless of a telemetry connection. These logs are saved in a **.bin** file. DataFlash logs are capable of logging data at a much faster rate than telemetry logs. DataFlash log files can be opened and inspected with MAVProxy, APM Planner 2 or Mission Planner.
 
 By default, a new DataFlash log is created when the autopilot is armed for the first time after booting. The DataFlash log will continue until the autopilot is powered down. The LOG_DISARMED parameter can be set to 'Enabled' in order to begin a DataFlash log as soon as the autopilot is booted, even before arming.
 
