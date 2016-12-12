@@ -25,6 +25,7 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 - Due to parameter reorganization, all parameters will be overwritten when updating
 - Must be used with QGroundControl daily builds or stable version 3.1 (once released)
 - Joystick buttons are configured by default
+- PX4Firmware sensor drivers have been replaced with in-tree APM drivers. Some BAR30 sensors do not respond regularly to the new driver. If your pressure sensor is not detected, set the BRD_TYPE parameter to 100 and reboot to fall back to the PX4Firmware driver. Please report back if you experience an issue with the BAR30 sensor.
 
 **Important Note for ArduSub-3.4-rc1:** Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after flashing V3.4-rc1, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After loading the new firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed from firmware, this is okay. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware versions prior to V3.4-rc1. Subsequent releases will keep the same parameter format, so this will only have to be done once.
 
