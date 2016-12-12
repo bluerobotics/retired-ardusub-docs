@@ -20,7 +20,7 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 ## Release History
 
-**ArduSub-3.4-rc1:** *(2016-12-11)* [ArduSub v3.4](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc1/) is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available. Notes:
+**ArduSub-3.4-rc1:** *(2016-12-11)* [ArduSub v3.4](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc1/) is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available. This **release candidate** will be posted for a few weeks for testing before the official v3.4 is released. Please test and provide feedback! Notes:
 
 - Due to parameter reorganization, all parameters will be overwritten when updating
 - Must be used with QGroundControl daily builds or stable version 3.1 (once released)
