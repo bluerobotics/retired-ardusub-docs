@@ -26,6 +26,8 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 - Must be used with QGroundControl daily builds or stable version 3.1 (once released)
 - Joystick buttons are configured by default
 
+Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after flashing V3.4-rc1, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After loading the new firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed from firmware, this is OK. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware versions prior to V3.4-rc1. Subsequent releases will keep the same parameter format, so this will only have to be done once.
+
 # Images
 
 A fully set up image for the Raspberry Pi is available here. This image is used to set up the Raspberry Pi 3 computer as a *companion computer* for the Pixhawk autopilot. See here for [instructions on how to flash the image to the SD card](/raspi-setup/#easy-setup-with-disk-image).
