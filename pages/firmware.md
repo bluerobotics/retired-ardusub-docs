@@ -12,9 +12,19 @@ nav:
 
 Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). See here for [instructions on how to flash the Pixhawk](/initial-setup/#loading-firmware-on-pixhawk). Firmware is available for the following hardware:
 
-* Pixhawk (px-v2)
+#### Pixhawk (px-v2)
 
-<i class="fa fa-download" aria-hidden="true"></i> [ArduSub Firmware Repository](http://firmware.ardusub.com)
+**Stable Release:** *(Coming soon, please test ArduSub-3.4-rc1 below)*
+
+**Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub Firmware Repository](http://firmware.ardusub.com/Sub/latest)
+
+## Release History
+
+**ArduSub-3.4-rc1:** *(2016-12-11)* [ArduSub v3.4](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc1/) is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available. Notes:
+
+- Due to parameter reorganization, all parameters will be overwritten when updating
+- Must be used with QGroundControl daily builds or stable version 3.1 (once released)
+- Joystick buttons are configured by default
 
 # Images
 
