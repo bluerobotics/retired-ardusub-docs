@@ -20,14 +20,22 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 ## Release History
 
-**ArduSub-3.4-rc1:** *(2016-12-11)* [ArduSub v3.4](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc1/) is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available. This **release candidate** will be posted for a few weeks for testing before the official v3.4 is released. Please test and provide feedback! Notes:
+**ArduSub-3.4-rc1:** *(2016-12-11)* [ArduSub v3.4](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc1/) is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available. This **release candidate** will be posted for a few weeks for testing before the official v3.4 is released. Please test and provide feedback!
+
+Notes:
 
 - Due to parameter reorganization, all parameters will be overwritten when updating
 - Must be used with QGroundControl daily builds or stable version 3.1 (once released)
 - Joystick buttons are configured by default
 - PX4Firmware sensor drivers have been replaced with in-tree APM drivers. On some hardware, the barometer driver will sometimes hang until a reboot. If your pressure sensor is not detected after rebooting, set the BRD_TYPE parameter to 100 and reboot to fall back to the PX4Firmware driver. Please report back if you experience an issue with the pressure sensor and the new driver.
 
-**Important Note for ArduSub-3.4-rc1:** Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after flashing V3.4-rc1, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After loading the new firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed from firmware, this is okay. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware versions prior to V3.4-rc1. Subsequent releases will keep the same parameter format, so this will only have to be done once.
+**Important Note for ArduSub-3.4:** Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after flashing V3.4-rc1, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After loading the new firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed from firmware, this is okay. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware versions prior to V3.4-rc1. Subsequent releases will keep the same parameter format, so this will only have to be done once.
+
+**ArduSub-3.4-rc2** *(2016-12-13)* [ArduSub v3.4-rc2](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc2/)
+
+Notes:
+
+- Bug fix on external barometer initialization. BRD_TYPE parameter should remain set to 2.
 
 # Images
 
