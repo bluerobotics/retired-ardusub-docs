@@ -12,7 +12,7 @@ nav:
 
 Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). See here for [instructions on how to flash the Pixhawk](/initial-setup/#loading-firmware-on-pixhawk). Firmware is available for the following hardware:
 
-#### Pixhawk (px-v2)
+#### Pixhawk (px4-v2)
 
 **Stable Release:** *(Coming soon, please test ArduSub-3.4-rc2 below)*
 
