@@ -15,7 +15,7 @@ This page shares issues that users have run into and how they were resolved. Hop
 
 **Vehicle turns or moves even when not controlled to do so.**
 
-Please check RCx_TRIM parameters to make sure that all trims are set to 1500.
+Please check RCx_TRIM parameters to make sure that all trims are set to 1500, with the exception of RC3_TRIM, which should be set to 1100.
 
 **Motors spin fast as soon as the vehicle is armed.**
 
