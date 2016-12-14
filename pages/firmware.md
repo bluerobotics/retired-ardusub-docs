@@ -20,7 +20,13 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 ## Release History
 
-**ArduSub-3.4-rc2:** *(2016-12-13)* Download [ArduSub v3.4-rc2 here.](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc2/)
+**ArduSub-3.4-rc3:** *(2016-12-14)* Download [ArduSub v3.4-rc3 here.](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc3/)
+
+Notes:
+
+- Bug fix for GCS (ground control station) failsafe, suppress warning message until after first contact.
+
+**ArduSub-3.4-rc2:** *(2016-12-13)*
 
 Notes:
 
