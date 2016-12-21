@@ -66,24 +66,50 @@ These instructions are provided for those who wish to set everything up themselv
 
 Start with Jessie-Lite image downloaded from [raspberrypi.org](https://www.raspberrypi.org/downloads/raspbian/) and follow their instructions to install it to an SD card.
 
-1. Insert SD card to Raspberry Pi and allow to boot up for about 1 minute.
-2. Remove SD card, insert to card reader, and modify the file `/boot/cmdline.txt` to have "ip=192.168.2.2" to the end of the line. It will look something like this (all one line):
+1. Modify the file `/boot/cmdline.txt` to have "ip=192.168.2.2" to the end of the line. It will look something like this (all one line):
 
 		dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait ip=192.168.2.2
 
-3. Insert the SD card back into the Raspberry Pi, connect the Ethernet directly to your computer (through a tether interface board if desired), and power it up.
+2. Create a new, empty file `/boot/ssh` (no extension) to enable ssh.
+3. Insert the SD card into the Raspberry Pi, connect the Ethernet directly to your computer (through a tether interface board if desired), and power it up.
 
-### Set Up Internet Sharing
+### Connect to the Raspberry Pi
 
-Please see the main [host computer setup](/initial-setup/#host-computer-setup) sections for details.
+The host computer needs to be configured with a static ip address of 192.168.2.1 on the ethernet interface. Please see the main [host computer setup](/initial-setup/#host-computer-setup) sections for details.
 
-### Command Line Setup
-
-All of this setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like Putty or the Mac Terminal. The default password is `raspberry`.
+All of the remaining setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like PuTTY or the Mac Terminal. The default password is `raspberry`.
 
 	ssh pi@192.168.2.2
 
-First, run `rpi-config` to expand filesystem and enable the camera.
+### Connect to the Internet
+
+The Raspberry Pi will require an internet connection to download and install the necessary software. If you are on a Mac and have set up Internet sharing, you are good to go. Otherwise, setup the WiFi connection on the Raspberry Pi as shown below.
+
+#### WiFi
+
+Edit `/etc/wpa_supplicant/wpa_supplicant.conf` on the Raspberry Pi by running:
+
+	sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+Add the following to the end of the file:
+
+	network={
+	ssid="yournetworkname"
+	psk="yournetworkpassword"
+	}
+
+Save your changes with CTRL+O, and close the editor with CTRL+X. Then restart the wireless interface:
+
+	sudo ifdown wlan0
+	sudo ifup wlan0
+
+Check your Internet connection:
+
+	ping ardusub.com
+
+### Command Line Setup
+
+First, run `rpi-config` to expand the filesystem and enable the camera.
 
 1. Run `sudo raspi-config` on the command line.
 2. Choose "Expand Filesystem", then "Ok"
@@ -125,7 +151,7 @@ Clone the companion repository:
 
 	git clone https://github.com/bluerobotics/companion.git
 
-Add these lines to `/etc/rc.local` to automatically start `mavproxy` and the video stream. Add them before the `exit 0` at the end.
+Add these lines to `/etc/rc.local` to automatically start `mavproxy` and the video stream. Add them above the `exit 0` line at the end.
 
 	screen -dm -S mavproxy /home/pi/companion/RPI2/Raspbian/start_mavproxy_telem_splitter.sh
 	screen -dm -S video /home/pi/companion/RPI2/Raspbian/start_video.sh
