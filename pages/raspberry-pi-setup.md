@@ -83,7 +83,7 @@ All of the remaining setup is completed on the command line. You must connect to
 
 ### Connect to the Internet
 
-The Raspberry Pi will require an internet connection to download and install the necessary software. If you are on a Mac and have set up Internet sharing, you are good to go. Otherwise, setup the WiFi connection on the Raspberry Pi as shown below.
+The Raspberry Pi will require an internet connection to download and install the necessary software. If you are on a Mac and have set up [Internet sharing](/initial-setup/#mac), you are good to go. Otherwise, setup the WiFi connection on the Raspberry Pi as shown below.
 
 #### WiFi
 
@@ -176,7 +176,7 @@ With an Ethernet tether and companion computer, it is possible to flash the Pixh
 
 *Note: The default password for the Raspberry Pi is `raspberry`*
 
-To use these instructions, your companion computer will have to be connected to the internet via internet sharing through the tether or a separate wifi connection. Please see the [internet sharing instructions](/raspi-setup/#set-up-internet-sharing) to set that up.
+To use these instructions, your companion computer will have to be connected to the Internet. Please see the [Internet setup instructions](/raspi-setup/#connect-to-the-internet) to set that up.
 
 First make sure your companion computer has the most recent scripts. Execute this command from the host computer:
 
