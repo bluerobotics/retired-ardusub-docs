@@ -14,7 +14,7 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 #### Pixhawk (px4-v2)
 
-**Stable Release:** *(Coming soon, please test ArduSub-3.4-rc2 below)*
+**Stable Release:** *(Coming soon, please test ArduSub-3.4-rc3 below)*
 
 **Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub Firmware Repository](http://firmware.ardusub.com/Sub/latest)
 
