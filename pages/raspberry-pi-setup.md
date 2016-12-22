@@ -28,7 +28,7 @@ Follow the instructions provided on [raspberrypi.org](https://www.raspberrypi.or
 
 ### Mac and Linux
 
-Insert the SD card to a card reader, open a terminal, and run the following command to find the disk identifier of the SD card.
+Insert the SD card in a card reader, open a terminal, and run the following command to find the disk identifier of the SD card.
 
 On Mac:
 
@@ -38,7 +38,7 @@ On Linux:
 
 	sudo fdisk -l
 
-You can find the disk identifier in the output. It will look something like `/dev/disk2` on Mac and `/dev/sdb` or `/dev/mmcblk0` on Linux. Verify the disk identifier of the SD card by checking the disk size listed. If you are still unsure, try running the command with and without the SD card connected to the computer to see which disk identifier appears and disappears in the output. You need to start by unmounting all partitions on that disk. Run the following command using the top level disk identifier for your SD card, *not* an identifier of one of the partitions on the SD card. (Partition identifiers look like `/dev/disk1s1` on Mac or `/dev/sdb1`, `/dev/mmcblk0p1` on Linux)
+You can find the disk identifier in the output. It will look something like `/dev/disk2` on Mac and `/dev/sdb` or `/dev/mmcblk0` on Linux. Verify the disk identifier of the SD card by checking the disk size listed. If you are still unsure, try running the command with and without the SD card connected to the computer to see which disk identifier appears and disappears in the output. You need to start by unmounting all partitions on that disk. Run the following command using the top level disk identifier for your SD card, *not* an identifier for one of the partitions on the SD card. (Partition identifiers look like `/dev/disk1s1` on Mac or `/dev/sdb1`, `/dev/mmcblk0p1` on Linux)
 
 On Mac:
 
@@ -109,58 +109,30 @@ Check your Internet connection:
 
 ### Command Line Setup
 
-First, run `rpi-config` to expand the filesystem and enable the camera.
+First, run `raspi-config` to expand the filesystem and enable the camera.
 
 1. Run `sudo raspi-config` on the command line.
 2. Choose "Expand Filesystem", then "Ok"
-3. Choose "Enable Camera", then "Yes", then "Ok"
+3. Choose "Enable Camera", then "Yes", then "Ok" (The option "Enable Camera" can be found under "Interfacing Options" if it is not available in the main menu).
 4. Choose "Finish" and "Yes" to rebooting.
 
-Next, update the current software and install the prerequisites needed.
+Next, update the current software and install the prerequisites needed by running the setup script in the Blue Robotics [companion repository](https://github.com/bluerobotics/companion). Start by downloading the script on the Raspberry Pi:
 
-	sudo apt-get update
-	sudo apt-get install -y git
+	wget https://raw.githubusercontent.com/bluerobotics/companion/master/RPI2/Raspbian/setup.sh
 
-	# Update package lists and current packages
-	sudo apt-get update
-	sudo apt-get upgrade
+Make the script executable
 
-	# Update Raspberry Pi
-	sudo apt-get install -y rpi-update
-	sudo rpi-update
+	chmod +x setup.sh
 
-	# install python and pip
-	sudo apt-get install -y python-dev python-pip
+Run the script
 
-	# install dronekit
-	sudo pip install dronekit dronekit-sitl # also installs pymavlink
-	sudo pip install mavproxy
+	./setup.sh
 
-	# install screen
-	sudo apt-get install -y screen
-
-	# live video related packages
-	sudo apt-get install -y gstreamer1.0
-
-
-Disable camera LED if using the v1 camera.
-
-	sudo sed '$a disable_camera_led=1' /boot/config.txt
-
-Clone the companion repository:
-
-	git clone https://github.com/bluerobotics/companion.git
-
-Add these lines to `/etc/rc.local` to automatically start `mavproxy` and the video stream. Add them above the `exit 0` line at the end.
-
-	screen -dm -S mavproxy /home/pi/companion/RPI2/Raspbian/start_mavproxy_telem_splitter.sh
-	screen -dm -S video /home/pi/companion/RPI2/Raspbian/start_video.sh
-
-Last, restart the Raspberry Pi
+It may take 90 minutes for all of the software to be installed and set up. When the script completes, reboot the Raspberry Pi:
 
 	sudo shutdown now -r
 
-When it reboots, it will automatically start streaming video if the camera is connected and will automatically connect to the Pixhawk, if connected.
+When the Raspberry Pi reboots, it will automatically start streaming video if the camera is connected and will automatically connect to the Pixhawk, if connected. If you have issues at this point, try running the setup script again, in case a package was unable to be retreived the first time.
 
 ## Advanced
 
