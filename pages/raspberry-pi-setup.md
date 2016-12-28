@@ -22,9 +22,13 @@ With the simple method, you restore a `.img` file to the Raspberry Pi SD Card. T
 
 To load the image to your SD card, use the following instructions.
 
+### Windows
+
+Follow the instructions provided on [raspberrypi.org](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md)
+
 ### Mac and Linux
 
-Insert the SD card to a card reader, open a terminal, and run the following command to find the disk number of the SD card.
+Insert the SD card in a card reader, open a terminal, and run the following command to find the disk identifier of the SD card.
 
 On Mac:
 
@@ -32,19 +36,19 @@ On Mac:
 
 On Linux:
 
-	df -h
+	sudo fdisk -l
 
-You can find the disk number in the output and it will look something like `/dev/diskX` or `/dev/sddX`. It may be `disk2`, `disk3` on Mac and `/dev/sdd1`, `/dev/sdd2` on Linux. You need to start by unmounting that disk.
+You can find the disk identifier in the output. It will look something like `/dev/disk2` on Mac and `/dev/sdb` or `/dev/mmcblk0` on Linux. Verify the disk identifier of the SD card by checking the disk size listed. If you are still unsure, try running the command with and without the SD card connected to the computer to see which disk identifier appears and disappears in the output. You need to start by unmounting all partitions on that disk. Run the following command using the top level disk identifier for your SD card, *not* an identifier for one of the partitions on the SD card. (Partition identifiers look like `/dev/disk1s1` on Mac or `/dev/sdb1`, `/dev/mmcblk0p1` on Linux)
 
 On Mac:
 
 	diskutil unmountDisk /dev/diskX
 
-On Linux:
+On Linux (add ?* to unmount all partitions):
 
-	umount /dev/sddX
+	umount /dev/sdX?*
 
-To write the disk image to the SD card, use the following command (on Linux, replace `bs=1m` with `bs=1M`):
+To write the disk image to the SD card, use the following command. On Mac, change `/dev/diskX` to `/dev/rdiskX` for faster transfers. On Linux, replace `bs=1m` with `bs=1M`. Make sure that the identifier after `of=` is your SD card!:
 
 	sudo dd bs=1m if=~/Downloads/ardusub-raspbian.img of=/dev/rdiskX
 
@@ -52,7 +56,7 @@ If the image is still compressed, you can combine the decompression and writing 
 
 	gunzip --stdout ardusub-raspbian.img.gz | sudo dd bs=1m of=/dev/rdiskX
 
-Note that the location and name of `rasbian-ardusub.img` might be slightly different depending on where you downloaded it. Once complete, you can eject the SD card and install it on the Raspberry Pi. That's it!
+Note that the location and name of `ardusub-raspbian.img` might be slightly different depending on where you downloaded it. Once complete, you can eject the SD card and install it on the Raspberry Pi. That's it!
 
 ## Setup From Scratch
 
@@ -62,75 +66,73 @@ These instructions are provided for those who wish to set everything up themselv
 
 Start with Jessie-Lite image downloaded from [raspberrypi.org](https://www.raspberrypi.org/downloads/raspbian/) and follow their instructions to install it to an SD card.
 
-1. Insert SD card to Raspberry Pi and allow to boot up for about 1 minute.
-2. Remove SD card, insert to card reader, and modify the file `/boot/cmdline.txt` to have "ip=192.168.2.2" to the end of the line. It will look something like this (all one line):
+1. Modify the file `/boot/cmdline.txt` to have "ip=192.168.2.2" to the end of the line. It will look something like this (all one line):
 
 		dwc_otg.lpm_enable=0 console=serial0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait ip=192.168.2.2
 
-3. Insert the SD card back into the Raspberry Pi, connect the Ethernet directly to your computer (through a tether interface board if desired), and power it up.
+2. Create a new, empty file `/boot/ssh` (no extension) to enable ssh.
+3. Insert the SD card into the Raspberry Pi, connect the Ethernet directly to your computer (through a tether interface board if desired), and power it up.
 
-### Set Up Internet Sharing
+### Connect to the Raspberry Pi
 
-Please see the main [host computer setup](/initial-setup/#host-computer-setup) sections for details.
+The host computer needs to be configured with a static ip address of 192.168.2.1 on the ethernet interface. Please see the main [host computer setup](/initial-setup/#host-computer-setup) sections for details.
 
-### Command Line Setup
-
-All of this setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like Putty or the Mac Terminal. The default password is `raspberry`.
+All of the remaining setup is completed on the command line. You must connect to the Raspberry Pi via SSH, using a client program like PuTTY or the Mac Terminal. The default password is `raspberry`.
 
 	ssh pi@192.168.2.2
 
-First, run `rpi-config` to expand filesystem and enable the camera.
+### Connect to the Internet
+
+The Raspberry Pi will require an internet connection to download and install the necessary software. If you are on a Mac and have set up Internet sharing, you are good to go. Otherwise, setup the WiFi connection on the Raspberry Pi as shown below.
+
+#### WiFi
+
+Edit `/etc/wpa_supplicant/wpa_supplicant.conf` on the Raspberry Pi by running:
+
+	sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+Add the following to the end of the file:
+
+	network={
+	ssid="yournetworkname"
+	psk="yournetworkpassword"
+	}
+
+Save your changes with CTRL+O, and close the editor with CTRL+X. Then restart the wireless interface:
+
+	sudo ifdown wlan0
+	sudo ifup wlan0
+
+Check your Internet connection:
+
+	ping ardusub.com
+
+### Command Line Setup
+
+First, run `raspi-config` to expand the filesystem and enable the camera.
 
 1. Run `sudo raspi-config` on the command line.
 2. Choose "Expand Filesystem", then "Ok"
-3. Choose "Enable Camera", then "Yes", then "Ok"
+3. Choose "Enable Camera", then "Yes", then "Ok" (The option "Enable Camera" can be found under "Interfacing Options" if it is not available in the main menu).
 4. Choose "Finish" and "Yes" to rebooting.
 
-Next, update the current software and install the prerequisites needed.
+Next, update the current software and install the prerequisites needed by running the setup script in the Blue Robotics [companion repository](https://github.com/bluerobotics/companion). Start by downloading the script on the Raspberry Pi:
 
-	sudo apt-get update
-	sudo apt-get install -y git
+	wget https://raw.githubusercontent.com/bluerobotics/companion/master/RPI2/Raspbian/setup.sh
 
-	# Update package lists and current packages
-	sudo apt-get update
-	sudo apt-get upgrade
+Make the script executable
 
-	# Update Raspberry Pi
-	sudo apt-get install -y rpi-update
-	sudo rpi-update
+	chmod +x setup.sh
 
-	# install python and pip
-	sudo apt-get install -y python-dev python-pip
+Run the script
 
-	# install dronekit
-	sudo pip install dronekit dronekit-sitl # also installs pymavlink
-	sudo pip install mavproxy
+	./setup.sh
 
-	# install screen
-	sudo apt-get install -y screen
-
-	# live video related packages
-	sudo apt-get install -y gstreamer1.0
-
-
-Disable camera LED if using the v1 camera.
-
-	sudo sed '$a disable_camera_led=1' /boot/config.txt
-
-Clone the companion repository:
-
-	git clone https://github.com/bluerobotics/companion.git
-
-Add these lines to `/etc/rc.local` to automatically start `mavproxy` and the video stream. Add them before the `exit 0` at the end.
-
-	screen -dm -S mavproxy /home/pi/companion/RPI2/Raspbian/start_mavproxy_telem_splitter.sh
-	screen -dm -S video /home/pi/companion/RPI2/Raspbian/start_video.sh
-
-Last, restart the Raspberry Pi
+It may take 90 minutes for all of the software to be installed and set up. When the script completes, reboot the Raspberry Pi:
 
 	sudo shutdown now -r
 
-When it reboots, it will automatically start streaming video if the camera is connected and will automatically connect to the Pixhawk, if connected.
+When the Raspberry Pi reboots, it will automatically start streaming video if the camera is connected and will automatically connect to the Pixhawk, if connected. If you have issues at this point, try running the setup script again, in case a package was unable to be retreived the first time.
 
 ## Advanced
 
