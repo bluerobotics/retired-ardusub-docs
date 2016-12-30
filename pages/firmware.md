@@ -14,35 +14,21 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 #### Pixhawk (px4-v2)
 
-**Stable Release:** *(Coming soon, please test ArduSub-3.4-rc3 below)*
+**Stable Release:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub-3.4](http://firmware.ardusub.com/Sub/stable/v3.4/)
+
+The stable release is the recommended download for most users.
 
 **Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub Firmware Repository](http://firmware.ardusub.com/Sub/latest)
 
+This is the latest build of the developmental master branch. This build should only be used by developers and advanced users.
+
 ## Release History
 
-**ArduSub-3.4-rc3:** *(2016-12-14)* Download [ArduSub v3.4-rc3 here.](http://firmware.ardusub.com/Sub/ArduSub-3.4-rc3/)
+**ArduSub-3.4** *(2016-12-30)* Download [ArduSub-3.4 here](http://firmware.ardusub.com/Sub/stable/v3.4/)
 
-Notes:
+ArduSub v3.4 is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available.
 
-- Bug fix for GCS (ground control station) failsafe, suppress warning message until after first contact.
-
-**ArduSub-3.4-rc2:** *(2016-12-13)*
-
-Notes:
-
-- Bug fix on external barometer initialization. BRD_TYPE parameter should remain set to 2.
-- Please see notes below for v3.4-rc1 as well.
-
-**ArduSub-3.4-rc1:** *(2016-12-11)* ArduSub v3.4 is the first official stable release of ArduSub. After nearly a year of steady development, testing, and improvement, ArduSub has become one of the most capable ROV control systems available. This **release candidate** will be posted for a few weeks for testing before the official v3.4 is released. Please test and provide feedback!
-
-Notes:
-
-- Due to parameter reorganization, all parameters will be overwritten when updating
-- Must be used with QGroundControl daily builds or stable version 3.1 (once released)
-- Joystick buttons are configured by default
-- PX4Firmware sensor drivers have been replaced with in-tree APM drivers. On some hardware, the barometer driver will sometimes hang until a reboot. If your pressure sensor is not detected after rebooting, set the BRD_TYPE parameter to 100 and reboot to fall back to the PX4Firmware driver. Please report back if you experience an issue with the pressure sensor and the new driver.
-
-**Important Note for ArduSub-3.4:** Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after flashing V3.4-rc1, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After loading the new firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed from firmware, this is okay. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware versions prior to V3.4-rc1. Subsequent releases will keep the same parameter format, so this will only have to be done once. If you are using a BlueROV2, it is recommended that you load the [Standard ArduSub Parameters](http://firmware.ardusub.com/parameters/latest/bluerov2.params) after upgrading. The upgrade process is demonstrated in the video below.
+**Important Note for ArduSub-3.4:** Many unused and inapplicable parameters that ArduSub inherited from ArduCopter have been removed. As a consequence, after upgrading to V3.4 and later, all of the parameters will be erased, and the default parameters will be loaded. **You should save your parameters before flashing this firmware.** After upgrading the firmware, you can load your saved parameter file through QGroundControl. When loading your old parameter file through QGroundControl, you will see many errors about parameters that have been removed, this is okay. After you load your parameter file, you need to change the SYSID_SW_MREV parameter to 1 before rebooting in order to prevent the default parameters from being reloaded. This procedure will only have to be done when upgrading from firmware version 3.4-dev. Subsequent releases will keep the same parameter format, so this will only have to be done once. If you are using a BlueROV2, it is recommended that you load the [Standard ArduSub Parameters](http://firmware.ardusub.com/parameters/latest/bluerov2.params) after upgrading. The upgrade process is demonstrated in the video below.
 
 <div align="center">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/siJoON6hgq4" frameborder="0" allowfullscreen></iframe>
