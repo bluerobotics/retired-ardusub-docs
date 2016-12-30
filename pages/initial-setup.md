@@ -72,7 +72,7 @@ For information on how to set up the Raspberry Pi for use with ArduSub, see the 
 
 ## Loading Firmware on Pixhawk
 
-Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com). Firmware is only available for the following hardware right now:
+Compiled firmware is now available and can be downloaded from [firmware.ardusub.com](http://firmware.ardusub.com/Sub/stable/v3.4/). Firmware is only available for the following hardware right now:
 
 * Pixhawk (px-v2)
 
@@ -92,7 +92,7 @@ Plug in the Pixhawk to the computer's USB port. Once detected, QGroundControl wi
 
 <img src="/images/qgc/firmware-2.png" class="img-responsive img-center" />
 
-Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you [download the most recent firmware](http://firmware.ardusub.com) and choose it here.
+Press "OK" at the top right and you will be prompted to select the firmware file (which will probably be named "ArduSub-v2.px4"). Make sure you download the most recent [stable firmware](http://firmware.ardusub.com/Sub/stable/v3.4/) and choose it here.
 
 The firmware will upload the Pixhawk and you'll see the following printout and success message.
 

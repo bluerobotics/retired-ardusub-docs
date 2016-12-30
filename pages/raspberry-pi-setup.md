@@ -195,7 +195,7 @@ Eventually it should catch and reflash the board.
 
 #### Flashing With a .px4 File
 
-These instructions assume you already have a firmware file (ArduSub-v2.px4) from the [firmware repository](http://firmware.ardusub.com/) or that you [compiled yourself](/developers/). Run the commands from the section above to update your `companion` code to the most recent version and then run the following command to update the firmware:
+These instructions assume you already have a firmware file (ArduSub-v2.px4) from the [firmware repository](http://firmware.ardusub.com/Sub/stable/v3.4/) or that you [compiled yourself](/developers/). Run the commands from the section above to update your `companion` code to the most recent version and then run the following command to update the firmware:
 
 	ssh pi@192.168.2.2 "/home/pi/companion/RPI2/Raspbian/flash_px4.py --stdin" < ArduSub-v2.px4
 
