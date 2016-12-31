@@ -84,7 +84,7 @@ If using an Ethernet-based tether option and computer-based autopilot, then stre
 
 ## Supported Frames
 
-ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Currently supported are:
+ArduSub includes a high-level motor library that can configure motors in any configuration. This library is used to implement a number of supported frame configurations. All configurations are shown from **top-down view**. Green thrusters indicate clockwise propellers and blue thrusters indicate counter-clockwise propellers (or vice-versa). Currently supported are:
 
 <div class="row">
 	<div class="col-md-4">
