@@ -29,26 +29,19 @@ You can also download the code as a zip file from the right sidebar of the <a hr
 
 To compile the ArduSub branch, first `cd ArduSub` to enter the directory and then use a command with the following format:
 
-	make [board type]-[frame type]
+	make [board type]
 
-For example,
+For example, to build for the Pixhawk 1:
 
-	make px4-v2-vectored
+	make px4-v2
 
-The available board types can be seen by entering `make` with no arguments. Below are the available frame types.
-
-| Frame          | Function                                                             |
-|---------------:|:-------------------------------------------------------------------- |
-| `bluerov`      | Compile for BlueROV thruster configuration                           |
-| `vectored`     | Compile for vectored w/ side-by-side vertical thruster configuration |
-| `vectored6dof` | Compile for vectored w/ corner vertical thruster configuration       |
-| `simplerov`    | Compile for simple 3-4 thruster ROV                                  |
+The available board types can be seen by entering `make` with no arguments.
 
 ## Uploading
 
 To upload the code to a PixHawk or similar controller, add `-upload` to the build command. For example:
 
-	make px4-v2-vectored-upload
+	make px4-v2-upload
 
 This only works with a direct USB connection to the Pixhawk. If you're using a companion computer and an Ethernet tether connection, you can upload the code through the companion computer. Please see the [Flashing Pixhawk Through SSH](/raspi-setup/#flashing-pixhawk-through-ssh) for instructions on how to do that.
 
@@ -66,13 +59,23 @@ One of the biggest additions to the ArduSub code is a six degree-of-freedom moto
         |---- AP_MotorsMulticopter
                        |---- AP_MotorsMatrix
                                     |---- AP_Motors6DOF
-                                                |---- AP_MotorsBlueROV
-                                                |---- AP_MotorsVectoredROV
-                                                |---- AP_MotorsVectored6DOF
-                                                |---- AP_MotorsSimpleROV
-                                                |---- AP_Motors[New configuration]
 
-To add a new motor configuration, you will create a new frame type and implement the `AP_Motors[New configuration]` for the new frame configuration.
+To add a new motor configuration, you will need to add your custom motor setup to [AP_Motors6DOF.cpp](https://github.com/bluerobotics/ardusub/blob/master/libraries/AP_Motors/AP_Motors6DOF.cpp). Find the following line, and add your frame configuration there. The frame is configured at boot according to the FRAME_CONFIG parameter. You will need to change this parameter to CUSTOM to use your custom frame.
+
+    case AS_MOTORS_CUSTOM_FRAME:
+        // Put your custom motor setup here
+
+The behavior of each motor will be defined by its assigned contributions to each of the 6 degrees of freedom in AP_Motors6DOF.cpp. You can use the other frame configurations as a reference guide to defining your own custom configuration. Here is the BlueROV1 frame configuration as an example:
+
+|Motor #|Roll Factor|Pitch Factor|Yaw Factor|Throttle Factor|Forward Factor|Lateral Factor|
+|1      |0          |0           |-1.0      |0              |1.0           |0             |
+|2      |0          |0           |1.0       |0              |1.0           |0             |  
+|3      |-0.5       |0.5         |0         |0.45           |0             |0             |    
+|4      |0.5        |0.5         |0         |0.45           |0             |0             |     
+|5      |0          |-1.0        |0         |1.0            |0             |0             |      
+|6      |-0.25      |0           |0         |0              |0             |1.0           |
+
+<img src="/images/bluerov-frame.png" class="img-responsive img-center" style="max-height:250px;">
 
 ## Adding Features
 

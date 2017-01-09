@@ -112,6 +112,8 @@ ArduSub includes a high-level motor library that can configure motors in any con
 	</div>
 </div>
 
+As of ArduSub 3.5, the frame is configured at boot according to the FRAME_CONFIG parameter. Common frames can be selected using the Frame Setup menu in QGC (3.1 or later). Other frames (like custom) can be selected directly from the parameter editor. If you change your frame, you will need to reboot for changes to take effect.
+
 [Please see here](/developers/#making-a-custom-configuration) if you would like to add your own configuration.
 
 ## Sensors and Actuators
