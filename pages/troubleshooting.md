@@ -16,11 +16,17 @@ This page shares issues that users have run into and how they were resolved. Hop
 
 **Vehicle turns or moves even when not controlled to do so.**
 
-Please check RCx_TRIM parameters to make sure that all trims are set to 1500.
+Please check RCx_TRIM parameters to make sure that all trims are set to 1500, with the exception of RC3_TRIM, which should be set to 1100.
 
 **Motors spin fast as soon as the vehicle is armed.**
 
 First, check to make sure that the joystick throttle is set to "Full down is zero throttle". If that does not fix it, check that the vehicle is calibrated level properly.
+
+## Miscellaneous
+
+**"No io thread heartbeat" message constantly appears.**
+
+This message indicates that the APM io thread has stopped running. The most likely cause is a corrupted filesystem on the micro SD card. Remove the card from the pixhawk, and format it as FAT32. If the error persists, you will need to replace the SD card, or disable dataflash log files by setting the LOG_BACKEND_TYPE parameter to None (0).
 
 ## Logging
 There are two types of logs that can be used to diagnose problems while running ArduSub, or to retrieve data for post-processing.
