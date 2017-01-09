@@ -5,6 +5,7 @@ permalink: /troubleshooting/
 nav:
 - Troubleshooting: troubleshooting
 - Logging: logging
+- Issue Reporting: issue-reporting
 ---
 
 # {{page.title}}
@@ -65,5 +66,13 @@ DataFlash logs can be retrieved in two ways:
 		Type 'log download X' to download log number X
 
 		While the log is downloading, you can type 'log status' to view the status of the download, or 'log cancel' to cancel the download.
+
+# Issue Reporting
+
+We're always trying to make our documentation, instructions, software, and user experience better. If you're having an issue with anything, please report it so that we can address it as soon as possible! Here's where to do that depending on what's wrong:
+
+- **ArduSub Issues:** For anything related to the ArduSub software that runs on the Pixhawk and controls the ROV, reports issues on the [ArduSub Github Issues Page](https://github.com/bluerobotics/ardusub/issues). If you're unsure where your issue should be posted, you can report it here.
+- **QGroundControl Issues:** For anything related to the QGroundControl software, joystick setup, video streaming, etc., please report an issue on the [QGroundControl Github Issues Page](https://github.com/mavlink/qgroundcontrol/issues).
+- **Documentation:** For anything related to the documentation and instructions here, please report an issue on the [ArduSub Documentation Github Issues Page](https://github.com/bluerobotics/ardusub-docs/issues).
 
 
