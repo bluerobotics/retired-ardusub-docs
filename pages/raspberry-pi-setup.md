@@ -16,9 +16,9 @@ This page explains how to set up a Raspberry Pi for use with ArduSub.
 
 With the simple method, you restore a `.img` file to the Raspberry Pi SD Card. This provides the operating system and everything already set up for running ArduSub. You can download the most recent disk image here:
 
-<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](http://img.ardusub.com/ardusub-raspbian.img.gz) *(1.47 GB, Updated 2016-10-19)*
+<i class="fa fa-download" aria-hidden="true"></i> [Latest Ardusub-Raspbian Image](http://img.ardusub.com/2017-01-12-ardusub-raspbian.img.zip) *(1.6 GB, Updated 2017-01-12)*
 
-*(Raspbian Jessie Lite 2016-09-23 w/ ArduSub Companion Computer Setup)*
+*(Raspbian Jessie Lite 2016-11-25 w/ ArduSub Companion Computer Setup)*
 
 To load the image to your SD card, use the following instructions.
 
