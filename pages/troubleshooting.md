@@ -14,15 +14,73 @@ This page shares issues that users have run into and how they were resolved. Hop
 
 ## Vehicle Control
 
+**Vehicle flips itself over**
+
+Check that the motor directions are [configured correctly](/initial-setup/#configuring-motor-directions). Also check that the motors are connected to the correct motor outputs on the flight controller, according to the [supported frame diagrams](/introduction/#supported-frames).
+
 **Vehicle turns or moves even when not controlled to do so.**
 
 Please check RCx_TRIM parameters to make sure that all trims are set to 1500, with the exception of RC3_TRIM, which should be set to 1100.
 
-**Motors spin fast as soon as the vehicle is armed.**
+**Motors spin as soon as the vehicle is armed.**
 
-First, check to make sure that the joystick throttle is set to "Full down is zero throttle". If that does not fix it, check that the vehicle is calibrated level properly.
+First, check to make sure that the joystick throttle is set to "Full down is zero throttle". If that does not fix it, check that the vehicle is calibrated level properly, and that the vehicle is sitting level.
+
+The flight controller attempts to stabilize the vehicle's attitude so that it is perfectly level. If the vehicle's attitude is off from level, even a fraction of a degree, the flight controller will spin the motors in an attempt to correct the error. If the vehicle is sitting on land, the error will not change, and the flight controller will spin the motors faster and faster as it tries harder and harder to correct the error. Testing the vehicle on land should be done in MANUAL mode, which just passes pilot inputs to the motors with no stabilization.
+
+## No Telemetry (No Pixhawk Connection)
+
+Check that the Pixhawk is plugged into the companion computer (Raspberry Pi) via USB. Make sure that you are using a USB cable with data lines, some USB cables only provide power and will not allow communication. You can connect the Pixhawk to the surface computer directly with the USB cable to verify that the USB cable works.
+
+Check your network settings. The surface computer should have a static IP address of 192.168.2.1. You may have to adjust your firewall settings to allow QGrouncControl access to the network. You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
+
+	ping 192.168.2.2
+
+## No Video
+
+If you do not have telemetry, please troubleshoot that first according to the above instructions.
+
+If you have telemetry, but no video, make sure the video settings are correct in QGroundControl. The video settings are found in the General tab of the Application Settings (Q icon) view. The video source should be set to UDP video, and the port should be 5600. These are the default settings.
+
+<img src="/images/qgc-video-settings.png" class="img-responsive img-center" style="max-height:400px;">
+
+If the video settings are correct, and there is no video stream, the most likely cause is a faulty physical connection with the camera ribbon cable. Disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi.
+
+If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Log into the Raspberry Pi via SSH and enter the following command into the Raspberry Pi command line:
+
+	sudo screen -r video
+
+If the camera is working and the video stream is running, the output should end in something like this:
+
+	Pipeline is PREROLLED ...
+	Setting pipeline to PLAYING ...
+	New clock: GstSystemClock
+
+To return to the command line and keep the streaming process running, hit control+a then type 'd' (to detach).
+
+If the video stream isn't running the output of the `screen` command will be:
+
+	There is no screen to be resumed matching video.
+
+You can relaunch the video streaming process by entering:
+
+	~/companion/RPI2/Raspbian/start_video.sh
+
+If the output of this command contains something like this:
+
+	mmal: Failed to create camera component
+
+Then the camera isn't working. Double check the camera ribbon cable, and try running `sudo rpi-update`.
 
 ## Miscellaneous
+
+**Camera does not tilt**
+
+The output servo rail on the Pixhawk requires a separate 5V power supply. The power module and USB power inputs on the Pixhawk will not power the servo rail. Make sure you have a 5V input on the servo rail via an ESC BEC or standalone BEC.
+
+Check that input/output channels are [configured for camera tilt](/initial-setup/#camera-tilt-setup-if-used).
+
+Check that joystick buttons [have been assigned](/initial-setup/#button-setup) to camera tilt functions.
 
 **"No io thread heartbeat" message constantly appears.**
 

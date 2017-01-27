@@ -218,7 +218,7 @@ Remember, when you set up the joystick above, you added buttons to change flight
 
 ## Camera Tilt Setup (if used)
 
-Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Select *Servo* for the "Type" under "Gimbal Settings" on the right.
+Select the *Camera* tab. The "Gimbal Tilt" settings are used for the camera tilt. Choose whichever channel the servo is plugged into for "Output channel" and *RC8* for "Input channel". Valid output channels are any of the unused motor outputs (RC1-RC8), and Aux outputs 1-4 (RC9-RC12). Select *Servo* for the "Type" under "Gimbal Settings" on the right.
 
 <img src="/images/qgc/camera-tilt-setup-1.png" class="img-responsive img-center" />
 
