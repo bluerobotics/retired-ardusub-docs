@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>ArduSub : Home</title>
+        <meta name="description" content="Open-Source Subsea Vehicle Control">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+        <!-- Javascript for creating automatic anchor icons -->
+        <!-- make sure you include the latest version -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js"></script>
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+        <style>
+        @font-face {
+          font-family: 'np_naipol_b';
+          src: url("/assets/fonts/np naipol all in one_b.eot");
+          src: url("/assets/fonts/np naipol all in one_b.eot?#iefix") format('embedded-opentype'),
+               url("/assets/fonts/np naipol all in one_b.woff") format('woff'),
+               url("/assets/fonts/np naipol all in one_b.ttf") format('truetype'),
+               url("/assets/fonts/np naipol all in one_b.svg#fp-20698") format('svg');
+        }
+        </style>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/favicons/manifest.json">
+        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+			<h2 class="no-anchor"><a class=brand href="/"><img src="/images/ardusub-logo-sm.png" style="max-width:225px" alt="ArduSub" /></a>
+			    <small>Open-Source Subsea Vehicle Control</small>
+			</h2>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="https://github.com/bluerobotics/ardusub/">Code</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Downloads <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/firmware/">Firmware Downloads</a></li>
+            <li><a href="/firmware/">Raspberry Pi Image Download</a></li>  
+            <li><a href="/firmware/">Parameter Files</a></li>            
+            <li><a href="http://ardusub.com/initial-setup/#install-qgroundcontrol">QGroundControl</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Community <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://gitter.im/bluerobotics/ardusub/">ArduSub Gitter Chat</a></li>
+            <li><a href="https://www.bluerobotics.com/forums/forum/bluerov-and-bluerov-ros-pkg/">ArduSub Forum</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="http://ardupilot.org">Ardupilot.org</a></li>
+            <li><a href="http://dronecode.org">DroneCode.org</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+	</div>
+</div>
+
+
+
+        <div class="container">
+            <div class=row>
+                
+                
+                    <div id=navigation class="col-sm-3">
+                        <ul class="sidenav nav nav-stacked">
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">Introducing ArduSub</li>
+                
+                    
+                        <li><a href="/introduction/#overview">Overview</a></li>
+                    
+                
+                    
+                        <li><a href="/introduction/#key-features">Key Features</a></li>
+                    
+                
+                    
+                        <li><a href="/introduction/#what-youll-need">What You'll Need</a></li>
+                    
+                
+                    
+                        <li><a href="/introduction/#supported-frames">Supported Frames</a></li>
+                    
+                
+                    
+                        <li><a href="/introduction/#sensors-and-actuators">Sensors and Actuators</a></li>
+                    
+                
+                    
+                        <li><a href="/introduction/#applications">Applications</a></li>
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">Initial Setup</li>
+                
+                    
+                        <li><a href="/initial-setup/#wiring-and-connections">Wiring and Connections</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#install-qgroundcontrol">Install QGroundControl</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#setup-raspberry-pi">Setup Raspberry Pi</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#loading-firmware-on-pixhawk">Loading Firmware</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#host-computer-setup">Host Computer Setup</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#connect-qgc-to-controller">Connect QGC to Controller</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#sensor-calibration">Sensor Calibration</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#important-parameters-to-set">Important Parameters</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#joystickgamepad-calibration">Joystick/Gamepad Calibration</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#button-setup">Button Setup</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#setup-voltage-and-current-measurement">Setup Voltage/Current Measurement</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#flight-mode-setup">Flight Mode Setup</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#camera-tilt-setup-if-used">Camera Tilt Setup</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#lights-setup">Lights Setup</a></li>
+                    
+                
+                    
+                        <li><a href="/initial-setup/#configuring-motor-directions">Configuring Motor Directions</a></li>
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">First Dive</li>
+                
+                    
+                        <li><a href="/first-dive/#joystickcontroller-functions">Joystick/Controller Functions</a></li>
+                    
+                
+                    
+                        <li><a href="/first-dive/#dive-modes">Dive Modes</a></li>
+                    
+                
+                    
+                        <li><a href="/first-dive/#arming-and-disarming">Arming and Disarming</a></li>
+                    
+                
+                    
+                        <li><a href="/first-dive/#tuning">Tuning</a></li>
+                    
+                
+                    
+                        <li><a href="/first-dive/#pre-dive-checklist">Pre-Dive Checklist</a></li>
+                    
+                
+                    
+                        <li><a href="/first-dive/#recording-video">Recording Video</a></li>
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">Developers</li>
+                
+                    
+                        <li><a href="/developers/#how-to-get-the-code">How to Get the Code</a></li>
+                    
+                
+                    
+                        <li><a href="/developers/#compiling">Compiling</a></li>
+                    
+                
+                    
+                        <li><a href="/developers/#uploading">Uploading</a></li>
+                    
+                
+                    
+                        <li><a href="/developers/#running">Running</a></li>
+                    
+                
+                    
+                        <li><a href="/developers/#making-a-custom-configuration">Making a Custom Configuration</a></li>
+                    
+                
+                    
+                        <li><a href="/developers/#adding-features">Adding Features</a></li>
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">Raspberry Pi Setup</li>
+                
+                    
+                        <li><a href="/raspi-setup/#easy-setup-with-disk-image">Easy Setup With Image</a></li>
+                    
+                
+                    
+                        <li><a href="/raspi-setup/#setup-from-scratch">Setup From Scratch</a></li>
+                    
+                
+                    
+                        <li><a href="/raspi-setup/#advanced">Advanced</a></li>
+                    
+                
+            
+        
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">Downloads</li>
+                
+                    
+                        <li><a href="/firmware/#firmware">Pixhawk Firmware</a></li>
+                    
+                
+                    
+                        <li><a href="/firmware/#images">Raspberry Pi Image</a></li>
+                    
+                
+                    
+                        <li><a href="/firmware/#parameter-files">Parameter Files</a></li>
+                    
+                
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li class="nav-header" data-order="">Troubleshooting</li>
+                
+                    
+                        <li><a href="/troubleshooting/#troubleshooting">Troubleshooting</a></li>
+                    
+                
+                    
+                        <li><a href="/troubleshooting/#logging">Logging</a></li>
+                    
+                
+                    
+                        <li><a href="/troubleshooting/#issue-reporting">Issue Reporting</a></li>
+                    
+                
+            
+        
+    
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<hr />
+
+<ul class="sidenav nav nav-list">
+    <li class=nav-header>Sponsored by</li>
+
+    <a href="http://bluerobotics.com"><img src="/images/br-logo-small.png" width="250px" alt="Blue Robotics Logo" class="img-responsive" /></a>
+</ul>
+
+<hr />
+
+<iframe src="https://ghbtns.com/github-btn.html?user=bluerobotics&repo=ardusub&type=star&count=true&v=2" frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=bluerobotics&repo=ardusub&type=fork&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="30px"></iframe>
+
+<img src="https://travis-ci.org/bluerobotics/ardusub.svg?branch=master" />
+
+                    </div>
+
+                    <div id=content class="col-sm-9">
+                        <div style="position:relative;width:100%">
+	<img src="/images/bluerov-up-1.jpg" alt="Reef picture from ArduSub" class="img-responsive" />
+	<div style="position:absolute;top:30%;left:0;width:100%;color:white;text-shadow:none;background: rgba(0,0,0,0.7);padding:15px;"> 
+		<h1 class="no-anchor"><img src="images/ardusub-logo-sm.png" style="max-width:300px" alt="ArduSub Logo" /></h1>
+		<h3 class="no-anchor">Open-Source Subsea Vehicle Control</h3>
+	</div>
+</div>
+
+<h2 id="what-is-ardusub">What is ArduSub?</h2>
+
+<p>The <em>ArduSub</em> project is a fully-featured, open-source controller for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs). Based on the popular <em>ArduCopter</em> code, the <em>ArduSub</em> code has extensive capabilities out of the box including feedback stability control, depth and heading hold, and autonomous position control if provided with position feedback.</p>
+
+<p><em>ArduSub</em> is designed to be safe, feature-rich, open-ended, and easy to use even for novice users.</p>
+
+<h2 id="ardusub-in-use">ArduSub in Use</h2>
+
+<p>These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Keep in mind that <em>ArduSub</em> can be used on many different ROV designs from unique DIY configurations to professional vehicles.</p>
+
+<div class="row">
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/iK9AmuqVN4I" frameborder="0" allowfullscreen=""></iframe>
+	</div>
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/IQBVRbQAQto" frameborder="0" allowfullscreen=""></iframe>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/BV91zgzEFHs" frameborder="0" allowfullscreen=""></iframe>
+	</div>
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/qVMpD-v-dfY" frameborder="0" allowfullscreen=""></iframe>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<iframe width="400" height="225" src="https://www.youtube.com/embed/hNuHMLZZWbw" frameborder="0" allowfullscreen=""></iframe>
+	</div>
+	<div class="col-md-6">
+		<!--<iframe width="400" height="225" src="https://www.youtube.com/embed/qVMpD-v-dfY" frameborder="0" allowfullscreen></iframe>-->
+	</div>
+</div>
+
+<h2 id="system-components">System Components</h2>
+
+<ul>
+  <li>A PixHawk or other DroneCode-compatible autopilot loaded with the latest version of the <a href="/firmware/">ArduSub firmware</a>.</li>
+  <li><a href="http://qgroundcontrol.org">QGroundControl software</a> for setup, configuration, and operation of the vehicle.</li>
+  <li>A <a href="http://bluerobotics.com">suitable ROV or AUV</a> for use with the software</li>
+  <li>Many other useful additions: depth sensors, tether communications, cameras, and other sensors and actuators</li>
+</ul>
+
+<h2 id="more-info">More Info</h2>
+
+<ul>
+  <li>Continue to the <a href="/introduction/">Introduction</a> section of this page.</li>
+  <li>Visit <a href="http://diydrones.com">DIYDrones.com</a>, a large community of enthusiasts largely clustered around the ArduPilot family of autopilots.</li>
+  <li>Use the <a href="http://bluerobotics.com/forums/">BlueRobotics Forums</a> to ask support questions and advice.</li>
+  <li>Join the <a href="https://gitter.im/bluerobotics/ardusub">Gitter developer chat room</a> to get quick support and contribute to development.</li>
+</ul>
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class="col-md-12">
+                    <br />
+Sponsored by <a href="http://www.bluerobotics.com/">Blue Robotics</a>. Code released under the <a href="https://github.com/bluerobotics/ardusub/blob/master/COPYING.txt">GPLv3 License</a>. Documentation released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-NC-SA 4.0</a>.
+<br />
+<a href="https://github.com/bluerobotics/ardusub-docs/issues/">Submit a Documentation GitHub Issue here</a> to report any errors, suggestions, or missing information in this documentation.<br />
+<a href="https://github.com/bluerobotics/ardusub/issues/">Submit an ArduSub GitHub Issue here</a> to report issues with the ArduSub software.
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            /*function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();*/
+        </script>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>        
+    </body>
+    <script>
+    // Table Bootstrap Classes
+    var tables = document.getElementsByTagName("table");
+    for (var i=0, max=tables.length; i < max; i++) {
+        tables[i].className += " table table-nonfluid";
+    }
+  </script>
+  <script>
+  /**
+  * AnchorJS v1.1.1 options and selector
+  */
+  anchors.add('h1');
+  anchors.add('h2');
+  anchors.add('h3');
+  anchors.add('h4');
+  anchors.remove('.no-anchor');
+   </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45744597-3', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
+  <script>
+  /** Built in Gitter chat room. Cool! */
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'bluerobotics/ardusub'
+  };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</html>
