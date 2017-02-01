@@ -46,7 +46,7 @@ If you have telemetry, but no video, make sure the video settings are correct in
 
 If the video settings are correct, and there is no video stream, the most likely cause is a faulty physical connection with the camera ribbon cable. Disconnect power to the ROV/Raspberry Pi and reseat the ribbon cable on both ends, ensuring that the contact side of the cable is oriented correctly. The contacts should face towards the board on the camera module, and towards the HDMI connector on the Raspberry Pi.
 
-If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Log into the Raspberry Pi via SSH and enter the following command into the Raspberry Pi command line:
+If you have checked all of the above and still don't have a video stream, you can check the video streaming process for errors. Log into the Raspberry Pi via SSH or PuTTY and enter the following command into the Raspberry Pi command line:
 
 	sudo screen -r video
 
