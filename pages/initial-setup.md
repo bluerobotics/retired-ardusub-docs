@@ -52,17 +52,7 @@ The hardware also has other input/output ports including I<sup>2</sup>C and seri
 
 ## Install QGroundControl
 
-*ArduSub* **requires the use of the most recent daily build of QGroundControl**. Downloads are available for Android, Windows, Mac OS, and Linux.
-
-Here are direct links to the most recent daily builds:
-
-- [Windows](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl-installer.exe)
-- [Mac OSX](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.dmg)
-- Linux
-	- [AppImage](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.AppImage)
-	- [Compressed Archive](https://s3-us-west-2.amazonaws.com/qgroundcontrol/builds/master/QGroundControl.tar.bz2)
-
-Please see the [QGroundControl download page](https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/content/download_and_install.html) for information on Android and iOS daily builds.
+Download the latest stable version of [QGroundControl](http://qgroundcontrol.com/downloads/).
 
 ## Setup Raspberry Pi
 
