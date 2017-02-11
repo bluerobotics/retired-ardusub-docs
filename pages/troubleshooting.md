@@ -30,11 +30,58 @@ The flight controller attempts to stabilize the vehicle's attitude so that it is
 
 ## No Telemetry (No Pixhawk Connection)
 
-Check that the Pixhawk is plugged into the companion computer (Raspberry Pi) via USB. Make sure that you are using a USB cable with data lines, some USB cables only provide power and will not allow communication. You can connect the Pixhawk to the surface computer directly with the USB cable to verify that the USB cable works.
+Install the latest [stable version](http://qgroundcontrol.com/downloads/) of QGroundControl.
 
-Check your network settings. The surface computer should have a static IP address of 192.168.2.1. You may have to adjust your firewall settings to allow QGrouncControl access to the network. You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
+Make sure the companion computer is powered with a supply that is capable of delivering at least 2A.
+
+Make sure that the QGroundControl is configured to automatically connect to UDP links. Click on the 'Q' icon in the upper left to view the Application Settings. Click on the 'General Settings' tab. In the options for 'Autoconnect to:', make sure the UDP option is checked.
+
+<img src="/images/qgc-autoconnect-settings.png" class="img-responsive img-center" style="max-height:400px;">
+
+#### Check Your Network
+
+You should be able to ping the companion computer from the surface computer. On the surface computer's command line enter:
 
 	ping 192.168.2.2
+
+If you do not get a ping response, then something is wrong with the network communication between the surface computer and the companion computer.
+
+Check your network settings. The surface computer should have a static IP address of 192.168.2.1. You may have to adjust your firewall settings to allow QGrouncControl access to the network. 
+
+Check the activity lights on the Raspberry Pi ethernet Jack. The lights should be on or blinking.
+
+If the lights are not on, make sure that you are using a network patch cable, not a crossover cable. Look closely at the color of the wires inside connectors on either end of the network cable, the order of the wires should be the same on both ends of the cable.
+
+#### Check MAVProxy
+
+If your network is configured correctly, but you still have no telemetry, we need to make sure that MAVProxy is running on the companion computer and that the Pixhawk and the Raspberry Pi are communicating. Please note that the Pixhawk must be connected to the companion computer before the companion computer is powered on. The MAVProxy process is started at boot, and if the Pixhawk is not connected at this point the MAVProxy process will exit until the companion computer is rebooted.
+
+Check that mavproxy is running on the pi. Log into the Pi via ssh or PuTTY, and type
+
+	sudo screen -r mavproxy
+
+Mavproxy and the Pixhawk are working correctly if the output contains something like this:
+
+	APM: ArduSub V3.4 (422c10cf)
+	APM: PX4: 96a4c296 NuttX: 580f5354
+	APM: Frame: ROV_VECTORED_FRAME
+	APM: PX4v2 0048003B 3135510C 35333436
+	Received 608 parameters
+	Saved 608 parameters to mav.parm
+
+To return to the command line and keep the mavproxy process running, hit control+a then type 'd' (to detach).
+
+If you do not see the above lines in the output, or if you see something like this:
+
+	There is no screen to be resumed matching mavproxy.
+
+then there was an error starting MAVProxy. You can restart the MAVProxy process by typing:
+
+	~/companion/RPI2/Raspbian/start_mavproxy_telem_splitter.sh
+
+Make sure that the Pixhawk is plugged into the companion computer (Raspberry Pi) with a micro USB cable. Make sure that the USB cable has data lines, some USB cables only provide power and will not allow communication. You can connect the Pixhawk to the surface computer directly with the USB cable to verify that the USB cable works.
+
+If you still do not have telemetry after all of these steps, please reboot the surface computer and the companion computer, and try again. If it is still not working after rebooting, please leave a comment on discuss.bluerobotics.com.
 
 ## No Video
 
