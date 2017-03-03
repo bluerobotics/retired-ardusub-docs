@@ -26,7 +26,8 @@ page-order: [
     ['/developers/'],
     ['/raspi-setup/'],
     ['/firmware/'],
-    ['/troubleshooting/']
+    ['/troubleshooting/'],
+    ['/parameters/']
 ]
 
 # Keep as an empty string if served up at the root. If served up at a specific
