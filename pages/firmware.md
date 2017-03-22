@@ -18,7 +18,7 @@ Compiled firmware is now available and can be downloaded from [firmware.ardusub.
 
 The stable release is the recommended download for most users.
 
-**Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub Firmware Repository](http://firmware.ardusub.com/Sub/latest)
+**Latest Build:** <i class="fa fa-download" aria-hidden="true"></i> [ArduSub Firmware Repository](http://firmware.us.ardupilot.org/Sub/latest/PX4/ArduSub-v2.px4)
 
 This is the latest build of the developmental master branch. This build should only be used by developers and advanced users.
 
