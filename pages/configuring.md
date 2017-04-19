@@ -28,3 +28,10 @@ Some of the parameters are dynamic and will change under certain circumstances o
 
 The entire set of parameters can be erased and reset to the default values that are configured in the autopilot firmware by clicking *Reset all to defaults* (ArduSub V3.5+ only).
 
+## Parameter Files
+
+These files have the recommended parameters for ArduSub, making it easy to setup and update parameters on your vehicle. These parameters will not adjust your accelerometer calibration, compass calibration, or motor directions, but will change joystick button setup, PID controller values, lights and other peripheral configurations, and all other parameters.
+
+#### Parameters for ArduSub V3.4 on BlueROV2
+
+<i class="fa fa-download" aria-hidden="true"></i> [Standard ArduSub Parameters](http://firmware.ardusub.com/parameters/latest/bluerov2.params)
