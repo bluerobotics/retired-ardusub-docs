@@ -27,6 +27,7 @@ page-order: [
     ['/raspi-setup/'],
     ['/firmware/'],
     ['/configuring/'],
+    ['/logging/'],
     ['/troubleshooting/'],
     ['/downloads/']
 ]
