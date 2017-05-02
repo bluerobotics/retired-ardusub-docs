@@ -10,11 +10,11 @@ nav:
 
 ## Overview
 
-Parameters are the user configurable settings for the autopilot. They are stored on internal memory on the autopilot, and are loaded when the autopilot boots up. Some parameters require a reboot to take effect, but most do not.
+Parameters are the user configurable settings for the autopilot. They are stored on internal memory on the autopilot, and are loaded when the autopilot boots up. Most of the configuration in the *Vehicle Setup* page in QGroundControl takes place by changing parameter values on the autopilot behind the scenes. Some parameters require a reboot to take effect, but most do not.
 
 ## Saving and Loading
 
-The entire set of parameters on the autopilot can be saved to a text file. Parameters can also be loaded from a text file, overwriting the current parameters on the autopilot.
+The entire set of parameters on the autopilot can be saved to a text file. Parameters can also be loaded from a text file, overwriting the current parameters on the autopilot. The parameter file reflects all of the settings that the user can adjust in the autopilot. This makes it a very useful tool for troubleshooting, and it is important to save and share a parameter file with the community if you need support with setting up or operating.
 
 To save or load parameters using QGroundControl, go to the *Vehicle Setup Page*, and click the *Parameters* tab. Click the *Tools* dropdown menu in the upper right hand corner and select *Save to file* or *Load from file*.
 
