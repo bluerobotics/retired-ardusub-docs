@@ -26,6 +26,7 @@ page-order: [
     ['/developers/'],
     ['/raspi-setup/'],
     ['/firmware/'],
+    ['/flight-modes/'],
     ['/configuring/'],
     ['/logging/'],
     ['/troubleshooting/'],
