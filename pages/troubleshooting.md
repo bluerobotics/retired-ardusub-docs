@@ -120,7 +120,7 @@ Then the camera isn't working. Double check the camera ribbon cable, and try run
 
 ## Miscellaneous
 
-**Camera does not tilt**
+### Camera does not tilt
 
 The output servo rail on the Pixhawk requires a separate 5V power supply. The power module and USB power inputs on the Pixhawk will not power the servo rail. Make sure you have a 5V input on the servo rail via an ESC BEC or standalone BEC.
 
@@ -128,7 +128,7 @@ Check that input/output channels are [configured for camera tilt](/initial-setup
 
 Check that joystick buttons [have been assigned](/initial-setup/#button-setup) to camera tilt functions.
 
-**"No io thread heartbeat" message constantly appears.**
+### "No io thread heartbeat" message constantly appears.
 
 This message indicates that the APM io thread has stopped running. The most likely cause is a corrupted filesystem on the micro SD card. Remove the card from the pixhawk, and format it as FAT32. If the error persists, you will need to replace the SD card, or disable dataflash log files by setting the LOG_BACKEND_TYPE parameter to None (0).
 
