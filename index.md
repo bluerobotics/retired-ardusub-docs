@@ -60,5 +60,5 @@ These videos show ArduSub in use on the Blue Robotics BlueROV1 and BlueROV2. Kee
 
 - Continue to the [Introduction](/introduction/) section of this page.
 - Visit [DIYDrones.com](http://diydrones.com), a large community of enthusiasts largely clustered around the ArduPilot family of autopilots.
-- Use the [BlueRobotics Forums](http://bluerobotics.com/forums/) to ask support questions and advice.
+- Use the [BlueRobotics Forums](http://discuss.bluerobotics.com/) to ask support questions and advice.
 - Join the [Gitter developer chat room](https://gitter.im/bluerobotics/ardusub) to get quick support and contribute to development.
