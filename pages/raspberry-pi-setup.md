@@ -166,36 +166,3 @@ Press Ctrl-T to check on status while this is happening. It can take quite a whi
 
 To restore the image, see the simple setup instructions above.
 
-### Flashing Pixhawk Through SSH
-
-With an Ethernet tether and companion computer, it is possible to flash the Pixhawk firmware through the companion computer - no need to directly access the Pixhawk.
-
-#### Flashing with Latest Build From the Internet
-
-*These instructions are in alpha test phase! Use with care and patience.*
-
-*Note: The default password for the Raspberry Pi is `raspberry`*
-
-To use these instructions, your companion computer will have to be connected to the Internet. Please see the [Internet setup instructions](/raspi-setup/#connect-to-the-internet) to set that up.
-
-First make sure your companion computer has the most recent scripts. Execute this command from the host computer:
-
-	ssh pi@192.168.2.2 "git --work-tree=/home/pi/companion --git-dir=/home/pi/companion/.git pull origin master"
-
-Next, run the firmware updater script:
- 
-	ssh pi@192.168.2.2 "/home/pi/companion/RPI2/Raspbian/flash_px4.py --frame=vectored"
-
-While the flashing command is running, you will see the script try to start the Pixhawk's bootloader multiple times. The output will look like this:
-
-	if the board does not respond, unplug and re-plug the USB connector.
-	attempting reboot on /dev/ttyACM0...
-
-Eventually it should catch and reflash the board.
-
-#### Flashing With a .px4 File
-
-These instructions assume you already have a firmware file (ArduSub-v2.px4) from the [firmware repository](http://firmware.ardusub.com/Sub/stable/v3.4/) or that you [compiled yourself](/developers/). Run the commands from the section above to update your `companion` code to the most recent version and then run the following command to update the firmware:
-
-	ssh pi@192.168.2.2 "/home/pi/companion/RPI2/Raspbian/flash_px4.py --stdin" < ArduSub-v2.px4
-
